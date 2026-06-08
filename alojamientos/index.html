@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propiedades Pro</title>
+    <style>
+        /* ================= CONFIGURACIÓN GLOBAL ================= */
+        html,
+        body {
+            margin: 0 !important;
+            padding: 0 !important;
+            width: 100% !important;
+            overflow-x: hidden;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #fcfcfc;
+            color: #333;
+            scroll-behavior: smooth;
+        }
+        
+        /* ================= HERO SECTION ================= */
+        .hero-section {
+            position: relative;
+            width: 100vw;
+            min-height: 35vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url('https://a0.muscache.com/im/pictures/7af30ad4-b5c5-498e-9158-9717be648a5b.jpg?im_w=1200');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-content {
+            padding: 10px;
+            max-width: 850px;
+            z-index: 2;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            color: #ffffff;
+            font-size: clamp(2.2rem, 6vw, 3.8rem);
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+
+        .hero-p {
+            color: #ffffff;
+            font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+            font-weight: 400;
+            margin-bottom: 35px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        /* ================= ESTILOS GENERALES ================= */
+        body {
+            font-family: 'Circular', -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+            background-color: transparent;
+            color: #222222;
+            line-height: 1.5;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        /* ================= FILTROS CENTRADOS ================= */
+        .contenedor-filtros {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 50px;
+            margin-top: 70px;
+            /* Ajuste para dar espacio a la navbar */
+            width: 100%;
+            max-width: 1100px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn-filtro {
+            flex-grow: 1;
+            background-color: #ffffff;
+            border: 1px solid #dddddd;
+            color: #222222;
+            padding: 10px 24px;
+            border-radius: 30px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-align: center;
+            /* Asegura que el texto esté centrado al estirarse */
+        }
+
+        .btn-filtro:hover {
+            border-color: #00a07c;
+            background-color: #f7f7f7;
+        }
+
+        .btn-filtro.activo {
+            background-color: #0eb28d;
+            color: #ffffff;
+            border-color: #00a07c;
+        }
+
+        /* ================= SECCIONES CENTRADAS ================= */
+        .seccion-zona {
+            animation: fadeIn 0.5s ease-out;
+            max-width: 1100px;
+            margin: 0 auto 60px auto;
+            /* Ajustado para centrar el bloque contenedor */
+            text-align: center;
+        }
+
+        .zona-titulo {
+            font-size: 2.2rem;
+            background-color: #f3f3f3;
+            border-radius: 7px;
+            box-shadow: 0 4px 12px rgba(128, 128, 128, .3);
+            margin-bottom: 30px;
+            font-weight: 700;
+            letter-spacing: 0.09em;
+        }
+
+        .contenedor-complejo {
+            margin-bottom: 50px;
+            padding-bottom: 40px;
+            border-bottom: 2px solid #c2c2c2;
+        }
+
+        .complejo-header {
+            margin: 0 0 30px 0;
+            /* Cambiado para alinear a la izquierda */
+            max-width: 100%;
+            /* Cambiado para usar todo el ancho disponible */
+            text-align: left;
+        }
+
+        .complejo-titulo {
+            font-size: 1.4rem;
+            text-align: left;
+            margin-bottom: 10px;
+            border-left: 4px solid #1a1a1a;
+            padding-left: 15px;
+        }
+
+        .complejo-descripcion {
+            font-size: 1.05rem;
+            color: #717171;
+            margin: 0;
+            padding-left: 19px;
+            /* Para alinear con el texto del título después del borde */
+        }
+
+        /* ================= GRID DE TARJETAS ================= */
+        .contenedor-propiedades {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 32px;
+            justify-content: center;
+            /* Centra el grupo de celdas */
+            justify-items: center;
+            /* Centra la tarjeta dentro de su celda */
+            text-align: left;
+        }
+
+        .tarjeta {
+            background: #ffffff;
+            border-radius: 16px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #ebebeb;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            max-width: 400px;
+            /* Ajusta este valor al tamaño que desees */
+            width: 100%;
+            /* Permite que sea responsive en pantallas pequeñas */
+        }
+
+        .tarjeta:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+        }
+
+        .imagen-contenedor {
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            overflow: hidden;
+        }
+
+        .tarjeta img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.2, 0, 0.2, 1);
+
+        }
+
+        .tarjeta:hover img {
+            transform: scale(1.06);
+        }
+
+        .contenido {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .titulo {
+            font-size: 1.15rem;
+            font-weight: 600;
+            margin: 0 0 10px 0;
+            color: #222222;
+            line-height: 1.3;
+        }
+
+        .caracteristicas {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-bottom: 24px;
+            font-size: 0.95rem;
+            color: #717171;
+            flex-grow: 1;
+        }
+
+        .etiqueta::after {
+            content: "•";
+            margin-left: 8px;
+            color: #cccccc;
+        }
+
+        .etiqueta:last-child::after {
+            content: "";
+            margin-left: 0;
+        }
+
+        .btn-airbnb {
+            background-color: #0eb28d;
+            color: white;
+            padding: 14px;
+            text-decoration: none;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-align: center;
+            transition: background-color 0.2s;
+            margin-top: auto;
+        }
+
+        .btn-airbnb:hover {
+            background-color: #006a52;
+        }
+
+        /* =========== FOOTER ========== */
+        footer {
+            background-color: #1a1a1a;
+            position: absolute;
+            left: 0;
+            width: 100%;
+            color: #ddd;
+            padding: 60px 10% 20px;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+            text-align: left;
+        }
+
+        .footer-logo h4 {
+            font-family: 'Playfair Display', serif;
+            color: #0eb28d;
+            font-size: 1.5rem;
+            margin: 0;
+        }
+
+        .footer-text {
+            font-size: 0.9rem;
+            color: #fff;
+        }
+
+        .copyright {
+            border-top: 1px solid #333;
+            padding-top: 20px;
+            font-size: 0.8rem;
+            color: #77777;
+        }
+
+        /* ================= BOTONES FLOTANTES (CLASE BASE) ================= */
+        .btn-floating {
+            position: fixed;
+            left: 40px;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+            /* Unifiqué la sombra para ambos */
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.3s ease;
+            text-decoration: none;
+            border: 2px solid #ffffff;
+            overflow: hidden;
+            /* Útil para cortar la bandera y mantener la forma redonda */
+            padding: 0;
+        }
+
+        /* Efecto hover global para ambos botones */
+        .btn-floating:hover {
+            transform: scale(1.1);
+        }
+
+        /* --- BOTÓN WHATSAPP --- */
+        .btn-whatsapp {
+            top: 16px;
+            background-color: #25d366;
+            color: #FFF;
+            z-index: 99999;
+            /* Por si necesitas que resalte sobre el otro */
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #128c7e;
+            /* Cambio de color exclusivo de WhatsApp */
+        }
+
+        .btn-whatsapp svg {
+            width: 32px;
+            height: 32px;
+            fill: white;
+        }
+
+        /* --- BOTÓN IDIOMA - BANDERA DE MÉXICO --- */
+        .btn-language {
+            top: 88px;
+            background-color: #fff;
+        }
+
+        .btn-language img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* ================= RESPONSIVE ================= */
+        @media (max-width: 768px) {
+            .zona-titulo {
+                font-size: 1.8rem;
+            }
+
+            .contenedor-propiedades {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .seccion-zona {
+                padding: 0 10px;
+            }
+
+            .btn-floating {
+                left: 22px;
+            }
+
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <a href="https://wa.me/525645656077" class="btn-floating btn-whatsapp" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 32 32">
+            <path d="M26.576 5.363c-2.69-2.69-6.406-4.354-10.511-4.354-8.209 0-14.865 6.655-14.865 14.865 0 2.732 0.737 5.291 2.022 7.491l-0.038-0.070-2.109 7.702 7.879-2.067c2.051 1.139 4.498 1.809 7.102 1.809h0.006c8.209-0.003 14.862-6.659 14.862-14.868 0-4.103-1.662-7.817-4.349-10.507l0 0zM16.062 28.228h-0.005c-0 0-0.001 0-0.001 0-2.319 0-4.489-0.64-6.342-1.753l0.056 0.031-0.451-0.267-4.675 1.227 1.247-4.559-0.294-0.467c-1.185-1.862-1.889-4.131-1.889-6.565 0-6.822 5.531-12.353 12.353-12.353s12.353 5.531 12.353 12.353c0 6.822-5.53 12.353-12.353 12.353h-0zM22.838 18.977c-0.371-0.186-2.197-1.083-2.537-1.208-0.341-0.124-0.589-0.185-0.837 0.187-0.246 0.371-0.958 1.207-1.175 1.455-0.216 0.249-0.434 0.279-0.805 0.094-1.15-0.466-2.138-1.087-2.997-1.852l0.010 0.009c-0.799-0.74-1.484-1.587-2.037-2.521l-0.028-0.052c-0.216-0.371-0.023-0.572 0.162-0.757 0.167-0.166 0.372-0.434 0.557-0.65 0.146-0.179 0.271-0.384 0.366-0.604l0.006-0.017c0.043-0.087 0.068-0.188 0.068-0.296 0-0.131-0.037-0.253-0.101-0.357l0.002 0.003c-0.094-0.186-0.836-2.014-1.145-2.758-0.302-0.724-0.609-0.625-0.836-0.637-0.216-0.010-0.464-0.012-0.712-0.012-0.395 0.010-0.746 0.188-0.988 0.463l-0.001 0.002c-0.802 0.761-1.3 1.834-1.3 3.023 0 0.026 0 0.053 0.001 0.079l-0-0.004c0.131 1.467 0.681 2.784 1.527 3.857l-0.012-0.015c1.604 2.379 3.742 4.282 6.251 5.564l0.094 0.043c0.548 0.248 1.25 0.513 1.968 0.74l0.149 0.041c0.442 0.14 0.951 0.221 1.479 0.221 0.303 0 0.601-0.027 0.889-0.078l-0.031 0.004c1.069-0.223 1.956-0.868 2.497-1.749l0.009-0.017c0.165-0.366 0.261-0.793 0.261-1.242 0-0.185-0.016-0.366-0.047-0.542l0.003 0.019c-0.092-0.155-0.34-0.247-0.712-0.434z"></path>
+        </svg>
+    </a>
+    
+    <a href="/accommodations/" class="btn-floating btn-language" title="Cambiar a ingles">
+        <img src="https://flagcdn.com/w160/gb.png" alt="Bandera de reino unido">
+    </a>
+
+    <header class="hero-section">
+        <div class="hero-content">
+            <h1>Alojamientos</h1>
+        </div>
+    </header>
+
+    <div class="contenedor-filtros">
+        <button class="btn-filtro activo" onclick="filtrarZona('todas', this)">Todas las zonas</button>
+        <button class="btn-filtro" onclick="filtrarZona('cancun', this)">Cancún</button>
+        <button class="btn-filtro" onclick="filtrarZona('holbox', this)">Holbox</button>
+        <button class="btn-filtro" onclick="filtrarZona('morelos', this)">Morelos</button>
+        <button class="btn-filtro" onclick="filtrarZona('acapulco', this)">Acapulco</button>
+    </div>
+
+    <div class="seccion-zona" data-zona="cancun">
+        <h2 class="zona-titulo">Cancún</h2>
+
+        <div class="contenedor-complejo">
+            <div class="complejo-header">
+                <h3 class="complejo-titulo">Playa Mujeres - La Amada Residences</h3>
+                <p class="complejo-descripcion">Lujo y privacidad absoluta en una comunidad cerrada con marina y club de playa privado.</p>
+            </div>
+            <div class="contenedor-propiedades">
+                <div class="tarjeta" onclick="window.location.href='/amada/'">
+                    <div class="imagen-contenedor"><img src="https://a0.muscache.com/im/pictures/miso/Hosting-1044990740565083029/original/7ea5589f-310e-47d1-831c-da1ea7346a33.jpeg?im_w=1440" alt="Departamento Playa Mujeres"></div>
+                    <div class="contenido">
+                        <h3 class="titulo">Lujoso departamento con hermosa playa</h3>
+                        <div class="caracteristicas">
+                            <span class="etiqueta">7 Huéspedes</span>
+                            <span class="etiqueta">3 Habitaciones</span>
+                            <span class="etiqueta">2 Baños</span>
+                        </div>
+                        <a href="https://www.airbnb.mx/rooms/1044990740565083029" target="_blank" class="btn-airbnb">Reservar ahora</a>
+                    </div>
+                </div>
+                <div class="tarjeta" onclick="window.location.href='/amada/'">
+                    <div class="imagen-contenedor"><img src="https://a0.muscache.com/im/pictures/cd527338-9f0d-4e6a-b32c-2425640e9bc2.jpg?im_w=1440" alt="Penthouse La Amada"></div>
+                    <div class="contenido">
+                        <h3 class="titulo">Penthouse de lujo en Residencial La Amada</h3>
+                        <div class="caracteristicas">
+                            <span class="etiqueta">8 Huéspedes</span>
+                            <span class="etiqueta">3 Habitaciones</span>
+                            <span class="etiqueta">3 Baños</span>
+                        </div>
+                        <a href="https://www.airbnb.mx/rooms/954381545245331717" target="_blank" class="btn-airbnb">Reservar ahora</a>
+                    </div>
+                </div>
+                <div class="tarjeta" onclick="window.location.href='/amada/'">
+                    <div class="imagen-contenedor"><img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6ODUzMDA0NjAyNDY0OTkyMTcw/original/88318ada-d4ec-4340-a69a-3ce789c4f818.jpeg?im_w=1440" alt="La Amada Lujo"></div>
+                    <div class="contenido">
+                        <h3 class="titulo">Lujo, confort y playa privada en La Amada</h3>
+                        <div class="caracteristicas">
+                            <span class="etiqueta">6 Huéspedes</span>
+                            <span class="etiqueta">2 Habitaciones</span>
+                            <span class="etiqueta">2 Baños</span>
+                        </div>
+                        <a href="https://www.airbnb.mx/rooms/853004602464992170" target="_blank" class="btn-airbnb">Reservar ahora</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="contenedor-complejo">
+            <div class="complejo-header">
+                <h3 class="complejo-titulo">Puerta del Mar - Amara Cancún</h3>
+                <p class="complejo-descripcion">Exclusividad en Puerto Juárez con acceso directo al ferry y vistas espectaculares al Caribe.</p>
+            </div>
+            <div class="contenedor-propiedades">
+                <div class="tarjeta">
+                    <div class="imagen-contenedor">
+                        <img src="https://a0.muscache.com/im/pictures/miso/Hosting-918978789461492698/original/d72411ae-f99d-41ba-b3bd-5e1af2614f0c.jpeg?im_w=1200" alt="Amara Depto 1">
+                    </div>
+                    <div class="contenido">
+                        <h3 class="titulo">Departamento en Amara Cancún, puerta del mar</h3>
+                        <div class="caracteristicas">
+                            <span class="etiqueta">2 Huéspedes</span>
+                            <span class="etiqueta">1 Habitación</span>
+                            <span class="etiqueta">1 Baño</span>
+                        </div>
+                        <a href="https://www.airbnb.mx/rooms/918978789461492698" target="_blank" class="btn-airbnb">Reservar ahora</a>
+                    </div>
+                </div>
+                <div class="tarjeta">
+                    <div class="imagen-contenedor">
+                        <img src="https://a0.muscache.com/im/pictures/miso/Hosting-1007248876379629766/original/f19e7acd-2f65-437d-b1b4-a3f7ef6ed88c.jpeg?im_w=1440" alt="Amara Depto 2">
+                    </div>
+                    <div class="contenido">
+                        <h3 class="titulo">Departamento con vista al mar en Amara Cancún</h3>
+                        <div class="caracteristicas">
+                            <span class="etiqueta">4 Huéspedes</span>
+                            <span class="etiqueta">2 Habitaciones</span>
+                            <span class="etiqueta">2 Baños</span>
+                        </div>
+                        <a href="https://www.airbnb.mx/rooms/1007248876379629766" target="_blank" class="btn-airbnb">Reservar ahora</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="contenedor-complejo">
+            <div class="complejo-header">
+                <h3 class="complejo-titulo">Long Island - Madison</h3>
+                <p class="complejo-descripcion">Ubicación céntrica en la vibrante Av. Huayacán, ideal para familias y estancias dinámicas.</p>
+            </div>
+            <div class="contenedor-propiedades">
+                <div class="tarjeta">
+                    <div class="imagen-contenedor"><img src="https://a0.muscache.com/im/pictures/miso/Hosting-646553604770000453/original/e9e7df4e-832c-4596-b25f-f99f81bb7d48.jpeg?im_w=1440" alt="Madison"></div>
+                    <div class="contenido">
+                        <h3 class="titulo">Moderno Departamento Planta Baja con Alberca</h3>
+                        <div class="caracteristicas">
+                            <span class="etiqueta">6 Huéspedes</span>
+                            <span class="etiqueta">2 Habitaciones</span>
+                            <span class="etiqueta">2 Baños</span>
+                        </div>
+                        <a href="https://www.airbnb.mx/rooms/646553604770000453?source_impression_id=p3_1776879540_P3sPjjskm4gCSUDt" class="btn-airbnb">Reservar ahora</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="seccion-zona" data-zona="holbox">
+        <h2 class="zona-titulo">Holbox</h2>
+        <div class="contenedor-complejo">
+            <div class="complejo-header">
+                <h3 class="complejo-titulo">Punta Cocos - Yum Balam</h3>
+                <p class="complejo-descripcion">Experiencia eco-chic en la zona más virgen de Holbox, famosa por sus atardeceres.</p>
+            </div>
+            <div class="contenedor-propiedades">
+                <div class="tarjeta">
+                    <div class="imagen-contenedor"><img src="https://a0.muscache.com/im/pictures/miso/Hosting-1113881946483557614/original/6e8e77cc-9b6e-4b0f-9456-86a582d74585.jpeg?im_w=1440" alt="Yum Balam Suite"></div>
+                    <div class="contenido">
+                        <h3 class="titulo">Alojamiento entero: loft en Holbox, México</h3>
+                        <div class="caracteristicas">
+                            <span class="etiqueta">2 Huéspedes</span>
+                            <span class="etiqueta">1 Habitación</span>
+                            <span class="etiqueta">1 Baño</span>
+                        </div>
+                        <a href="https://www.airbnb.mx/rooms/1113881946483557614?source_impression_id=p3_1776880160_P3v19nWUy9FFZN7p" class="btn-airbnb">Reservar ahora</a>
+                    </div>
+                </div>
+                <div class="tarjeta">
+                    <div class="imagen-contenedor"><img src="https://a0.muscache.com/im/pictures/faf3b9c0-44d9-4842-a165-983f157c9977.jpg?im_w=1440" alt="Yum Balam Suite"></div>
+                    <div class="contenido">
+                        <h3 class="titulo">Alojamiento entero: loft en Holbox, México</h3>
+                        <div class="caracteristicas">
+                            <span class="etiqueta">2 Huéspedes</span>
+                            <span class="etiqueta">1 Habitación</span>
+                            <span class="etiqueta">1 Baño</span>
+                        </div>
+                        <a href="https://www.airbnb.mx/rooms/1104322507951986184?source_impression_id=p3_1776880219_P3zPbZz9HocgQurL" class="btn-airbnb">Reservar ahora</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="seccion-zona" data-zona="morelos">
+        <h2 class="zona-titulo">Morelos</h2>
+        <div class="contenedor-complejo">
+            <div class="complejo-header">
+                <h3 class="complejo-titulo">Hacienda Viveros de Cocoyoc</h3>
+                <p class="complejo-descripcion">Residencias de estilo colonial en un entorno seguro y relajado, perfectas para familias.</p>
+            </div>
+            <div class="contenedor-propiedades">
+                <div class="tarjeta" >
+                    <div class="imagen-contenedor"><img src="https://a0.muscache.com/im/pictures/hosting/Hosting-587567877948882472/original/76a4883e-2458-45d4-a6f1-2b8bcb82d2f8.jpeg?im_w=960" alt="Residencia Historica"></div>
+                    <div class="contenido">
+                        <h3 class="titulo">Increíble casa en Hacienda Viveros de Cocoyoc</h3>
+                        <div class="caracteristicas">
+                            <span class="etiqueta">11 Huéspedes</span>
+                            <span class="etiqueta">4 Habitaciones</span>
+                            <span class="etiqueta">3 Baños</span>
+                        </div>
+                        <a href="https://www.airbnb.mx/rooms/587567877948882472?source_impression_id=p3_1776887030_P36AumHdwVVTWkY9" class="btn-airbnb">Reservar ahora</a>
+                    </div>
+                </div>
+                <div class="tarjeta">
+                    <div class="imagen-contenedor"><img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1638666403932647175/original/a5672385-071d-43d8-b967-9b30ae39bcdf.jpeg?im_w=960" alt="Casa Colonial"></div>
+                    <div class="contenido">
+                        <h3 class="titulo">Casa en Hacienda Viveros de Cocoyoc</h3>
+                        <div class="caracteristicas">
+                            <span class="etiqueta">11 Huéspedes</span>
+                            <span class="etiqueta">5 Habitaciones</span>
+                            <span class="etiqueta">4 Baños</span>
+                        </div>
+                        <a href="https://www.airbnb.mx/rooms/1638666403932647175?source_impression_id=p3_1776887180_P3GTGhCYTPU7ZSlh" class="btn-airbnb">Reservar ahora</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contenedor-complejo">
+            <div class="complejo-header">
+                <h3 class="complejo-titulo">Colinas de Oaxtepec</h3>
+                <p class="complejo-descripcion">Casas de descanso con el mejor clima del mundo y cercanía a Six Flags Hurricane Harbor.</p>
+            </div>
+            <div class="contenedor-propiedades">
+                <div class="tarjeta">
+                    <div class="imagen-contenedor"><img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1398712581243603123/original/dcefd053-63c3-4500-9912-1b9a44aa31a1.jpeg?im_w=1440" alt="Casa Oaxtepec A"></div>
+                    <div class="contenido">
+                        <h3 class="titulo">Departamento con rooftop en Colinas de Oaxtepec</h3>
+                        <div class="caracteristicas">
+                            <span class="etiqueta">5 Huéspedes</span>
+                            <span class="etiqueta">3 Habitaciones</span>
+                            <span class="etiqueta">2 Baños</span>
+                        </div>
+                        <a href="https://www.airbnb.mx/rooms/1395252117345365812?source_impression_id=p3_1776888715_P3KkikznzSpPxzvS" class="btn-airbnb">Reservar ahora</a>
+                    </div>
+                </div>
+                <div class="tarjeta">
+                    <div class="imagen-contenedor"><img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTM5NTI1MjExNzM0NTM2NTgxMg==/original/63f35857-befe-45d1-89f4-6317c5b6acfa.jpeg?im_w=1440" alt="Casa Oaxtepec B"></div>
+                    <div class="contenido">
+                        <h3 class="titulo">Departamento con rooftop en Colinas de Oaxtepec</h3>
+                        <div class="caracteristicas">
+                            <span class="etiqueta">5 Huéspedes</span>
+                            <span class="etiqueta">3 Habitaciones</span>
+                            <span class="etiqueta">2 Baños</span>
+                        </div>
+                        <a href="https://www.airbnb.mx/rooms/1398712581243603123?source_impression_id=p3_1776888877_P3QuzY0Gv-MfxNax" class="btn-airbnb">Reservar ahora</a>
+                    </div>
+                </div>
+                <div class="tarjeta">
+                    <div class="imagen-contenedor"><img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1398712581243603123/original/6c2bfe03-c2aa-4f40-9f4e-76849c8d4a0d.jpeg?im_w=1200" alt="Casa Oaxtepec C"></div>
+                    <div class="contenido">
+                        <h3 class="titulo">Departamento con rooftop en Colinas de Oaxtepec</h3>
+                        <div class="caracteristicas">
+                            <span class="etiqueta">5 Huéspedes</span>
+                            <span class="etiqueta">3 Habitaciones</span>
+                            <span class="etiqueta">2 Baños</span>
+                        </div>
+                        <a href="https://www.airbnb.mx/rooms/1398816873367801288?source_impression_id=p3_1776889066_P3NZ0g-rJkyunRvQ" class="btn-airbnb">Reservar ahora</a>
+                    </div>
+                </div>
+                <div class="tarjeta">
+                    <div class="imagen-contenedor"><img src="https://a0.muscache.com/im/pictures/miso/Hosting-1392991346137350741/original/b908d8e4-eefa-41bf-8df6-31680fcc8884.jpeg?im_w=960" alt="Casa Oaxtepec D"></div>
+                    <div class="contenido">
+                        <h3 class="titulo">Hermoso departamento en Colinas de Oaxtepec</h3>
+                        <div class="caracteristicas">
+                            <span class="etiqueta">5 Huéspedes</span>
+                            <span class="etiqueta">3 Habitaciones</span>
+                            <span class="etiqueta">2 Baños</span>
+                        </div>
+                        <a href="https://www.airbnb.mx/rooms/1392991346137350741?source_impression_id=p3_1776889228_P355QfvuBoQCHRph" class="btn-airbnb">Reservar ahora</a>
+                    </div>
+                </div>
+                <div class="tarjeta">
+                    <div class="imagen-contenedor"><img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTM5NDUxMTI4ODQ0MDUwMDYwNA==/original/6369b920-76bc-4a3b-aef0-0ff03a0da7b7.jpeg?im_w=1440" alt="Casa Oaxtepec E"></div>
+                    <div class="contenido">
+                        <h3 class="titulo">Increíble departamento en colinas de Oaxtepec</h3>
+                        <div class="caracteristicas">
+                            <span class="etiqueta">5 Huéspedes</span>
+                            <span class="etiqueta">3 Habitaciones</span>
+                            <span class="etiqueta">2 Baños</span>
+                        </div>
+                        <a href="https://www.airbnb.mx/rooms/1394511288440500604?source_impression_id=p3_1776889330_P3P-3ZKyWo-wLkjb" class="btn-airbnb">Reservar ahora</a>
+                    </div>
+                </div>
+                <div class="tarjeta">
+                    <div class="imagen-contenedor"><img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTM5NTA4OTMxOTU4MjI4MzEyMw==/original/d90297e1-6976-4e0d-a971-69fdc089af05.jpeg?im_w=1440" alt="Villa Privada Oaxtepec"></div>
+                    <div class="contenido">
+                        <h3 class="titulo">Increíble departamento en colinas de Oaxtepec</h3>
+                        <div class="caracteristicas">
+                            <span class="etiqueta">5 Huéspedes</span>
+                            <span class="etiqueta">3 Habitaciones</span>
+                            <span class="etiqueta">2 Baños</span>
+                        </div>
+                        <a href="https://www.airbnb.mx/rooms/1395089319582283123?source_impression_id=p3_1776889603_P3cHYrguIXbNpPxt" class="btn-airbnb">Reservar ahora</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="seccion-zona" data-zona="acapulco">
+        <h2 class="zona-titulo">Acapulco</h2>
+        <div class="contenedor-complejo">
+            <div class="complejo-header">
+                <h3 class="complejo-titulo">Condominio - Castillo Azul</h3>
+                <p class="complejo-descripcion">Vistas inigualables a la bahía de Acapulco en la exclusiva zona de la Escénica.</p>
+            </div>
+            <div class="contenedor-propiedades">
+                <div class="tarjeta">
+                    <div class="imagen-contenedor"><img src="https://a0.muscache.com/im/pictures/hosting/Hosting-756445041797601962/original/5333397b-e5e7-4a6d-b2d4-538b74c8d8ac.jpeg?im_w=1440" alt="Yum Balam Suite"></div>
+                    <div class="contenido">
+                        <h3 class="titulo">Departamento amplio y bonito con alberca</h3>
+                        <div class="caracteristicas">
+                            <span class="etiqueta">8 Huéspedes</span>
+                            <span class="etiqueta">3 Habitación</span>
+                            <span class="etiqueta">3 Baño</span>
+                        </div>
+                        <a href="https://www.airbnb.mx/rooms/756445041797601962?source_impression_id=p3_1776890204_P3NpkjH9HieZ1dP-" class="btn-airbnb">Reservar ahora</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h4>Kali Rental</h4>
+                <p style="font-size: 0.9rem; margin-top: 10px; color:#fff">Experiencias extraordinarias en cada estancia.</p>
+            </div>
+            <div>
+                <h5 style="color: #0eb28d; margin-bottom: 15px;">Contacto</h5>
+                <p class="footer-text">Email: reservations@kalirental.com<br>WhatsApp: +52 5645656077</p>
+            </div>
+            <div>
+                <h5 style="color: #0eb28d; margin-bottom: 15px;">Síguenos</h5>
+                <p class="footer-text">Instagram | Facebook</p>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2024 Kali Rental - Todos los derechos reservados. Gestionado vía Airbnb.
+        </div>
+    </footer>
+
+    <script>
+        function filtrarZona(zona, botonClicado) {
+            const botones = document.querySelectorAll('.btn-filtro');
+            botones.forEach(btn => btn.classList.remove('activo'));
+            botonClicado.classList.add('activo');
+
+            const secciones = document.querySelectorAll('.seccion-zona');
+            secciones.forEach(seccion => {
+                if (zona === 'todas') {
+                    seccion.style.display = 'block';
+                } else {
+                    seccion.style.display = (seccion.getAttribute('data-zona') === zona) ? 'block' : 'none';
+                }
+            });
+        }
+        document.querySelectorAll('.btn-airbnb').forEach(boton => {
+            boton.addEventListener('click', function(event) {
+                event.stopPropagation();
+            });
+        });
+    </script>
+
+</body>
+
+</html>
