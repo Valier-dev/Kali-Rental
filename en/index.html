@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/global.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 
     <style>
@@ -193,86 +194,6 @@
             color: #7777;
         }
         
-        /* ================= BOTONES FLOTANTES (CLASE BASE) ================= */
-        .btn-floating {
-            position: fixed;
-            left: 40px;
-            width: 55px;
-            height: 55px;
-            border-radius: 50%;
-            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-            z-index: 9999;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transition: transform 0.3s ease;
-            text-decoration: none;
-            border: 2px solid #ffffff;
-            overflow: hidden;
-            /* Corta la bandera para mantener la forma redonda */
-            padding: 0;
-            will-change: transform;
-            /* Optimiza la animación en móviles */
-        }
-
-        /* Efecto hover global */
-        .btn-floating:hover {
-            transform: scale(1.1);
-        }
-
-        /* --- BOTÓN WHATSAPP --- */
-        .btn-whatsapp {
-            bottom: 15%;
-            background-color: #25d366;
-            color: #FFF;
-            z-index: 99999;
-            /* Se mantiene por encima si coinciden */
-        }
-
-        .btn-whatsapp:hover {
-            background-color: #128c7e;
-        }
-
-        .btn-whatsapp svg {
-            width: 32px;
-            height: 32px;
-            fill: white;
-        }
-
-        /* --- BOTÓN IDIOMA - BANDERA DE MÉXICO --- */
-        .btn-language {
-            bottom: 5%;
-            background-color: #fff;
-        }
-
-        .btn-language img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        /* ================= RESPONSIVE (MÓVILES) ================= */
-        @media (max-width: 768px) {
-            .navbar {
-                padding: 15px 20px;
-            }
-
-            .brand-name {
-                font-size: 1.2rem;
-            }
-
-            .info-row {
-                text-align: center;
-                padding: 40px 5%;
-            }
-
-            .btn-floating {
-                left: auto;
-                /* Reseteamos la posición izquierda */
-                right: 20px;
-                /* Lo pegamos de forma segura a la derecha */
-            }
-        }
     </style>
 </head>
 <body>
