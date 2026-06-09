@@ -299,7 +299,7 @@
             border-top: 1px solid #333;
             padding-top: 20px;
             font-size: 0.8rem;
-            color: #77777;
+            color: #7777;
         }
 
         /* ================= BOTONES FLOTANTES (CLASE BASE) ================= */
@@ -310,7 +310,6 @@
             height: 55px;
             border-radius: 50%;
             box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-            /* Unifiqué la sombra para ambos */
             z-index: 9999;
             display: flex;
             justify-content: center;
@@ -319,27 +318,28 @@
             text-decoration: none;
             border: 2px solid #ffffff;
             overflow: hidden;
-            /* Útil para cortar la bandera y mantener la forma redonda */
+            /* Corta la bandera para mantener la forma redonda */
             padding: 0;
+            will-change: transform;
+            /* Optimiza la animación en móviles */
         }
 
-        /* Efecto hover global para ambos botones */
+        /* Efecto hover global */
         .btn-floating:hover {
             transform: scale(1.1);
         }
 
         /* --- BOTÓN WHATSAPP --- */
         .btn-whatsapp {
-            top: 16px;
+            bottom: 15%;
             background-color: #25d366;
             color: #FFF;
             z-index: 99999;
-            /* Por si necesitas que resalte sobre el otro */
+            /* Se mantiene por encima si coinciden */
         }
 
         .btn-whatsapp:hover {
             background-color: #128c7e;
-            /* Cambio de color exclusivo de WhatsApp */
         }
 
         .btn-whatsapp svg {
@@ -350,7 +350,7 @@
 
         /* --- BOTÓN IDIOMA - BANDERA DE MÉXICO --- */
         .btn-language {
-            top: 88px;
+            bottom: 5%;
             background-color: #fff;
         }
 
@@ -376,7 +376,10 @@
             }
 
             .btn-floating {
-                left: 22px;
+                left: auto;
+                /* Reseteamos la posición izquierda */
+                right: 20px;
+                /* Lo pegamos de forma segura a la derecha */
             }
 
         }
