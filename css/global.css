@@ -38,7 +38,7 @@
 /* ================= BOTONES FLOTANTES (CLASE BASE) ================= */
 .btn-floating {
     position: fixed;
-    left: 40px;
+    right: 40px;
     width: 55px;
     height: 55px;
     border-radius: 50%;
@@ -137,7 +137,7 @@
     }
 
     .btn-floating {
-        left: 20px;
+        right: 20px;
         /* Reseteamos la posición izquierda */
     }
 }
