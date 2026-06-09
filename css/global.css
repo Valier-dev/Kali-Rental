@@ -50,7 +50,6 @@
     transition: transform 0.3s ease;
     text-decoration: none;
     border: 2px solid #ffffff;
-    overflow: hidden;
     /* Corta la bandera para mantener la forma redonda */
     padding: 0;
     will-change: transform;
