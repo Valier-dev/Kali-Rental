@@ -90,7 +90,7 @@
 /* --- BOTÓN WHATSAPP --- */
 
 .btn-whatsapp {
-    bottom: 15%;
+    bottom: 95px;
     background-color: #25d366;
     color: #FFF;
     z-index: 99999;
@@ -109,7 +109,7 @@
 
 /* --- BOTÓN IDIOMA - BANDERA DE MÉXICO --- */
 .btn-language {
-    bottom: 5%;
+    bottom: 25px;
     background-color: #fff;
 }
 
