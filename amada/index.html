@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
 
     <style>
         /* CONFIGURACIÓN GLOBAL */
@@ -127,7 +129,7 @@
             pointer-events: auto;
             transform: scale(1) translateX(0);
             z-index: 10 !important;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
         }
 
         .tarjeta.anterior {
@@ -147,15 +149,57 @@
         }
 
         /* Contenido de la tarjeta del carrusel */
-        .imagen-contenedor { width: 100%; aspect-ratio: 4 / 3; overflow: hidden; }
-        .imagen-contenedor img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
-        .tarjeta.activa:hover img { transform: scale(1.05); }
-        
-        .contenido { padding: 25px; display: flex; flex-direction: column; flex-grow: 1; text-align: left; }
-        .titulo-tarjeta { font-size: 1.15rem; font-weight: 600; margin: 0 0 10px 0; color: #222; line-height: 1.3; }
-        .caracteristicas { display: flex; flex-wrap: wrap; gap: 8px; color: #717171; font-size: 0.9rem; margin-bottom: 20px; }
-        .etiqueta::after { content: "•"; margin-left: 8px; color: #ccc; }
-        .etiqueta:last-child::after { content: ""; }
+        .imagen-contenedor {
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            overflow: hidden;
+        }
+
+        .imagen-contenedor img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .tarjeta.activa:hover img {
+            transform: scale(1.05);
+        }
+
+        .contenido {
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            text-align: left;
+        }
+
+        .titulo-tarjeta {
+            font-size: 1.15rem;
+            font-weight: 600;
+            margin: 0 0 10px 0;
+            color: #222;
+            line-height: 1.3;
+        }
+
+        .caracteristicas {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            color: #717171;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+
+        .etiqueta::after {
+            content: "•";
+            margin-left: 8px;
+            color: #ccc;
+        }
+
+        .etiqueta:last-child::after {
+            content: "";
+        }
 
         .btn-airbnb {
             background-color: #0eb28d;
@@ -168,7 +212,10 @@
             transition: 0.3s;
             margin-top: auto;
         }
-        .btn-airbnb:hover { background-color: #006a52; }
+
+        .btn-airbnb:hover {
+            background-color: #006a52;
+        }
 
         /* Botones de Navegación */
         .btn-flecha {
@@ -181,7 +228,7 @@
             height: 50px;
             border-radius: 50%;
             cursor: pointer;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             z-index: 20;
             display: flex;
             justify-content: center;
@@ -189,15 +236,36 @@
             font-size: 1.2rem;
             transition: 0.3s;
         }
-        .btn-flecha:hover { background: #f7f7f7; transform: translateY(-50%) scale(1.1); }
-        .btn-flecha.izq { left: 25%; }
-        .btn-flecha.der { right: 25%; }
+
+        .btn-flecha:hover {
+            background: #f7f7f7;
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .btn-flecha.izq {
+            left: 25%;
+        }
+
+        .btn-flecha.der {
+            right: 25%;
+        }
 
         @media (max-width: 768px) {
-            .btn-flecha { display: none; }
-            .contenedor-propiedades { height: 480px; }
-            .tarjeta.anterior { transform: scale(0.8) translateX(-85%); }
-            .tarjeta.siguiente { transform: scale(0.8) translateX(85%); }
+            .btn-flecha {
+                display: none;
+            }
+
+            .contenedor-propiedades {
+                height: 480px;
+            }
+
+            .tarjeta.anterior {
+                transform: scale(0.8) translateX(-85%);
+            }
+
+            .tarjeta.siguiente {
+                transform: scale(0.8) translateX(85%);
+            }
         }
 
         /* --- TARJETAS DE BENEFICIOS (GRID ORIGINAL) --- */
@@ -220,11 +288,29 @@
             border-bottom: 4px solid transparent;
         }
 
-        .feature-card:hover { transform: translateY(-10px); border-bottom: 4px solid #0eb28d; }
+        .feature-card:hover {
+            transform: translateY(-10px);
+            border-bottom: 4px solid #0eb28d;
+        }
 
-        .feature-icon { width: 55px; height: 55px; margin: 0 auto 20px; fill: #0eb28d; display: block; }
-        .feature-card h3 { font-family: 'Playfair Display', serif; font-size: 1.0rem; margin-bottom: 15px; }
-        .feature-card p { font-size: 0.85rem; line-height: 1.6; }
+        .feature-icon {
+            width: 55px;
+            height: 55px;
+            margin: 0 auto 20px;
+            fill: #0eb28d;
+            display: block;
+        }
+
+        .feature-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.0rem;
+            margin-bottom: 15px;
+        }
+
+        .feature-card p {
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
 
         /* --- SECCIONES EXTRA (IMAGEN + TEXTO) --- */
         .info-row {
@@ -235,9 +321,23 @@
             padding: 80px 10%;
         }
 
-        .info-row.reverse { flex-direction: row-reverse; background-color: #f1f1f1; }
-        .info-image-wall, .info-text { flex: 1 1 400px; }
-        .info-image-wall img { width: 100%; border-radius: 15px; box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1); object-fit: cover; aspect-ratio: 4/3; }
+        .info-row.reverse {
+            flex-direction: row-reverse;
+            background-color: #f1f1f1;
+        }
+
+        .info-image-wall,
+        .info-text {
+            flex: 1 1 400px;
+        }
+
+        .info-image-wall img {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            object-fit: cover;
+            aspect-ratio: 4/3;
+        }
 
         .info-image {
             width: 100%;
@@ -248,14 +348,14 @@
             overflow: hidden;
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
         }
-        .info-image iframe { width: 100%; height: 100%; border: none; }
 
-        /* --- FOOTER --- */
-        footer { background-color: #1a1a1a; color: #ddd; padding: 60px 10% 20px; text-align: center; }
-        .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; margin-bottom: 40px; text-align: left; }
-        .footer-logo h4 { font-family: 'Playfair Display', serif; color: #0eb28d; font-size: 1.5rem; margin: 0; }
-        .footer-text { font-size: 0.9rem; color: #fff; }
-        .copyright { border-top: 1px solid #333; padding-top: 20px; font-size: 0.8rem; color: #777; }
+        .info-image iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+
 
         /* ================= BOTONES FLOTANTES ================= */
         .btn-floating {
@@ -276,23 +376,54 @@
             padding: 0;
         }
 
-        .btn-floating:hover { transform: scale(1.1); }
-        .btn-whatsapp { top: 16px; background-color: #25d366; }
-        .btn-whatsapp svg { width: 32px; height: 32px; fill: white; }
-        .btn-language { top: 88px; background-color: #fff; }
-        .btn-language img { width: 100%; height: 100%; object-fit: cover; }
+        .btn-floating:hover {
+            transform: scale(1.1);
+        }
+
+        .btn-whatsapp {
+            top: 16px;
+            background-color: #25d366;
+        }
+
+        .btn-whatsapp svg {
+            width: 32px;
+            height: 32px;
+            fill: white;
+        }
+
+        .btn-language {
+            top: 88px;
+            background-color: #fff;
+        }
+
+        .btn-language img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
 
         @media (max-width: 992px) {
-            .features-grid { grid-template-columns: repeat(2, 1fr); }
-            .info-row { padding: 40px 5%; text-align: center; }
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .info-row {
+                padding: 40px 5%;
+                text-align: center;
+            }
         }
     </style>
 </head>
 
 <body>
 
-    <a href="https://wa.me/525645656077" class="btn-floating btn-whatsapp" target="_blank" rel="noopener noreferrer" data-text="WhatsApp">
-        <svg viewBox="0 0 32 32"><path d="M26.576 5.363c-2.69-2.69-6.406-4.354-10.511-4.354-8.209 0-14.865 6.655-14.865 14.865 0 2.732 0.737 5.291 2.022 7.491l-0.038-0.070-2.109 7.702 7.879-2.067c2.051 1.139 4.498 1.809 7.102 1.809h0.006c8.209-0.003 14.862-6.659 14.862-14.868 0-4.103-1.662-7.817-4.349-10.507zM16.062 28.228h-0.005c-2.319 0-4.489-0.64-6.342-1.753l0.056 0.031-0.451-0.267-4.675 1.227 1.247-4.559-0.294-0.467c-1.185-1.862-1.889-4.131-1.889-6.565 0-6.822 5.531-12.353 12.353-12.353s12.353 5.531 12.353 12.353c0 6.822-5.53 12.353-12.353 12.353zM22.838 18.977c-0.371-0.186-2.197-1.083-2.537-1.208-0.341-0.124-0.589-0.185-0.837 0.187-0.246 0.371-0.958 1.207-1.175 1.455-0.216 0.249-0.434 0.279-0.805 0.094-1.15-0.466-2.138-1.087-2.997-1.852-0.799-0.74-1.484-1.587-2.037-2.521-0.216-0.371-0.023-0.572 0.162-0.757 0.167-0.166 0.372-0.434 0.557-0.65 0.146-0.179 0.271-0.384 0.366-0.604-0.094-0.186-0.836-2.014-1.145-2.758-0.302-0.724-0.609-0.625-0.836-0.637-0.216-0.010-0.464-0.012-0.712-0.012-0.395 0.010-0.746 0.188-0.988 0.463-0.802 0.761-1.3 1.834-1.3 3.023 0.131 1.467 0.681 2.784 1.527 3.857 1.604 2.379 3.742 4.282 6.251 5.564 0.548 0.248 1.25 0.513 1.968 0.74 0.442 0.14 0.951 0.221 1.479 0.221 1.069-0.223 1.956-0.868 2.497-1.749 0.165-0.366 0.261-0.793 0.261-1.242-0.092-0.155-0.34-0.247-0.712-0.434z"></path></svg>
+    <a href="https://wa.me/525645656077" class="btn-floating btn-whatsapp" target="_blank" rel="noopener noreferrer"
+        data-text="WhatsApp">
+        <svg viewBox="0 0 32 32">
+            <path
+                d="M26.576 5.363c-2.69-2.69-6.406-4.354-10.511-4.354-8.209 0-14.865 6.655-14.865 14.865 0 2.732 0.737 5.291 2.022 7.491l-0.038-0.070-2.109 7.702 7.879-2.067c2.051 1.139 4.498 1.809 7.102 1.809h0.006c8.209-0.003 14.862-6.659 14.862-14.868 0-4.103-1.662-7.817-4.349-10.507zM16.062 28.228h-0.005c-2.319 0-4.489-0.64-6.342-1.753l0.056 0.031-0.451-0.267-4.675 1.227 1.247-4.559-0.294-0.467c-1.185-1.862-1.889-4.131-1.889-6.565 0-6.822 5.531-12.353 12.353-12.353s12.353 5.531 12.353 12.353c0 6.822-5.53 12.353-12.353 12.353zM22.838 18.977c-0.371-0.186-2.197-1.083-2.537-1.208-0.341-0.124-0.589-0.185-0.837 0.187-0.246 0.371-0.958 1.207-1.175 1.455-0.216 0.249-0.434 0.279-0.805 0.094-1.15-0.466-2.138-1.087-2.997-1.852-0.799-0.74-1.484-1.587-2.037-2.521-0.216-0.371-0.023-0.572 0.162-0.757 0.167-0.166 0.372-0.434 0.557-0.65 0.146-0.179 0.271-0.384 0.366-0.604-0.094-0.186-0.836-2.014-1.145-2.758-0.302-0.724-0.609-0.625-0.836-0.637-0.216-0.010-0.464-0.012-0.712-0.012-0.395 0.010-0.746 0.188-0.988 0.463-0.802 0.761-1.3 1.834-1.3 3.023 0.131 1.467 0.681 2.784 1.527 3.857 1.604 2.379 3.742 4.282 6.251 5.564 0.548 0.248 1.25 0.513 1.968 0.74 0.442 0.14 0.951 0.221 1.479 0.221 1.069-0.223 1.956-0.868 2.497-1.749 0.165-0.366 0.261-0.793 0.261-1.242-0.092-0.155-0.34-0.247-0.712-0.434z">
+            </path>
+        </svg>
     </a>
 
     <a href="/en/" class="btn-floating btn-language" data-text="English">
@@ -308,78 +439,99 @@
 
     <section class="expert-section section-padding">
         <h2>Un refugio de exclusividad</h2>
-        <p>Ubicada en el corazón de <strong>Playa Mujeres</strong>, La Amada ofrece un entorno sin igual donde la selva maya se encuentra con el Caribe Mexicano. Diseñada para quienes buscan alejarse del bullicio.</p>
+        <p>Ubicada en el corazón de <strong>Playa Mujeres</strong>, La Amada ofrece un entorno sin igual donde la selva
+            maya se encuentra con el Caribe Mexicano. Diseñada para quienes buscan alejarse del bullicio.</p>
     </section>
 
     <section class="escena-carrusel">
         <h2 style="text-align: center; margin-bottom: 40px;">Nuestras Propiedades</h2>
-        
+
         <button class="btn-flecha izq">&#10094;</button>
 
         <div class="contenedor-propiedades">
 
-                            <div class="tarjeta" data-url="#">
-                                <div class="imagen-contenedor">
-                                    <img src="https://a0.muscache.com/im/pictures/miso/Hosting-1044990740565083029/original/7ea5589f-310e-47d1-831c-da1ea7346a33.jpeg?im_w=1440" alt="Departamento Playa Mujeres">
-                                </div>
-                                <div class="contenido">
-                                    <h3 class="titulo">Lujoso departamento con hermosa playa</h3>
-                                    <div class="caracteristicas">
-                                        <span class="etiqueta">7 Huéspedes</span>
-                                        <span class="etiqueta">3 Habitaciones</span>
-                                        <span class="etiqueta">2 Baños</span>
-                                    </div>
-                                    <a href="https://www.airbnb.mx/rooms/1044990740565083029" target="_blank" class="btn-airbnb">Reservar ahora</a>
-                                </div>
-                            </div>
-                            <div class="tarjeta" data-url="#">
-                                <div class="imagen-contenedor"><img src="https://a0.muscache.com/im/pictures/cd527338-9f0d-4e6a-b32c-2425640e9bc2.jpg?im_w=1440" alt="Penthouse La Amada"></div>
-                                <div class="contenido">
-                                    <h3 class="titulo">Penthouse de lujo en Residencial La Amada</h3>
-                                    <div class="caracteristicas">
-                                        <span class="etiqueta">8 Huéspedes</span>
-                                        <span class="etiqueta">3 Habitaciones</span>
-                                        <span class="etiqueta">3 Baños</span>
-                                    </div>
-                                    <a href="https://www.airbnb.mx/rooms/954381545245331717" target="_blank" class="btn-airbnb">Reservar ahora</a>
-                                </div>
-                            </div>
-                            <div class="tarjeta" data-url="#">
-                                <div class="imagen-contenedor"><img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6ODUzMDA0NjAyNDY0OTkyMTcw/original/88318ada-d4ec-4340-a69a-3ce789c4f818.jpeg?im_w=1440" alt="La Amada Lujo"></div>
-                                <div class="contenido">
-                                    <h3 class="titulo">Lujo, confort y playa privada en La Amada</h3>
-                                    <div class="caracteristicas">
-                                        <span class="etiqueta">6 Huéspedes</span>
-                                        <span class="etiqueta">2 Habitaciones</span>
-                                        <span class="etiqueta">2 Baños</span>
-                                    </div>
-                                    <a href="https://www.airbnb.mx/rooms/853004602464992170" target="_blank" class="btn-airbnb">Reservar ahora</a>
-                                </div>
-                            </div>
+            <div class="tarjeta" data-url="#">
+                <div class="imagen-contenedor">
+                    <img src="https://a0.muscache.com/im/pictures/miso/Hosting-1044990740565083029/original/7ea5589f-310e-47d1-831c-da1ea7346a33.jpeg?im_w=1440"
+                        alt="Departamento Playa Mujeres">
+                </div>
+                <div class="contenido">
+                    <h3 class="titulo">Lujoso departamento con hermosa playa</h3>
+                    <div class="caracteristicas">
+                        <span class="etiqueta">7 Huéspedes</span>
+                        <span class="etiqueta">3 Habitaciones</span>
+                        <span class="etiqueta">2 Baños</span>
+                    </div>
+                    <a href="https://www.airbnb.mx/rooms/1044990740565083029" target="_blank"
+                        class="btn-airbnb">Reservar ahora</a>
+                </div>
+            </div>
+            <div class="tarjeta" data-url="#">
+                <div class="imagen-contenedor"><img
+                        src="https://a0.muscache.com/im/pictures/cd527338-9f0d-4e6a-b32c-2425640e9bc2.jpg?im_w=1440"
+                        alt="Penthouse La Amada"></div>
+                <div class="contenido">
+                    <h3 class="titulo">Penthouse de lujo en Residencial La Amada</h3>
+                    <div class="caracteristicas">
+                        <span class="etiqueta">8 Huéspedes</span>
+                        <span class="etiqueta">3 Habitaciones</span>
+                        <span class="etiqueta">3 Baños</span>
+                    </div>
+                    <a href="https://www.airbnb.mx/rooms/954381545245331717" target="_blank" class="btn-airbnb">Reservar
+                        ahora</a>
+                </div>
+            </div>
+            <div class="tarjeta" data-url="#">
+                <div class="imagen-contenedor"><img
+                        src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6ODUzMDA0NjAyNDY0OTkyMTcw/original/88318ada-d4ec-4340-a69a-3ce789c4f818.jpeg?im_w=1440"
+                        alt="La Amada Lujo"></div>
+                <div class="contenido">
+                    <h3 class="titulo">Lujo, confort y playa privada en La Amada</h3>
+                    <div class="caracteristicas">
+                        <span class="etiqueta">6 Huéspedes</span>
+                        <span class="etiqueta">2 Habitaciones</span>
+                        <span class="etiqueta">2 Baños</span>
+                    </div>
+                    <a href="https://www.airbnb.mx/rooms/853004602464992170" target="_blank" class="btn-airbnb">Reservar
+                        ahora</a>
+                </div>
+            </div>
 
-                        </div>
+        </div>
 
         <button class="btn-flecha der">&#10095;</button>
     </section>
 
     <section class="features-grid">
         <div class="feature-card">
-            <svg class="feature-icon" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z" /></svg>
+            <svg class="feature-icon" viewBox="0 0 24 24">
+                <path
+                    d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z" />
+            </svg>
             <h3>Privacidad Absoluta</h3>
             <p>Comunidad cerrada con doble seguridad 24/7. Entorno exclusivo y tranquilo.</p>
         </div>
         <div class="feature-card">
-            <svg class="feature-icon" viewBox="0 0 24 24"><path d="M11 20v-3H7v3.67C7.36 20.88 8.14 21 9 21c1.38 0 2.59-.56 3.46-1.44.87.88 2.08 1.44 3.46 1.44.86 0 1.64-.12 2-.33V17h-4v3h-2.92zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-1.12 0-2.14-.38-2.95-1h5.9C14.14 19.62 13.12 20 12 20zm5-3H7v-1h10v1zm-2.88-3.03l-1.06 1.06-2.12-2.12-2.12 2.12-1.06-1.06L9.88 12 7.76 9.88l1.06-1.06 2.12 2.12 2.12-2.12 1.06 1.06L12.12 12l2.06 2.06z" /></svg>
+            <svg class="feature-icon" viewBox="0 0 24 24">
+                <path
+                    d="M11 20v-3H7v3.67C7.36 20.88 8.14 21 9 21c1.38 0 2.59-.56 3.46-1.44.87.88 2.08 1.44 3.46 1.44.86 0 1.64-.12 2-.33V17h-4v3h-2.92zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-1.12 0-2.14-.38-2.95-1h5.9C14.14 19.62 13.12 20 12 20zm5-3H7v-1h10v1zm-2.88-3.03l-1.06 1.06-2.12-2.12-2.12 2.12-1.06-1.06L9.88 12 7.76 9.88l1.06-1.06 2.12 2.12 2.12-2.12 1.06 1.06L12.12 12l2.06 2.06z" />
+            </svg>
             <h3>Playa Libre de Sargazo</h3>
             <p>Aguas mansas y transparentes todo el año por su ubicación protegida.</p>
         </div>
         <div class="feature-card">
-            <svg class="feature-icon" viewBox="0 0 24 24"><path d="M20 21c-1.39 0-2.78-.47-4-1.32-2.44 1.71-5.56 1.71-8 0C6.78 20.53 5.39 21 4 21H2v2h2c1.38 0 2.74-.35 4-.99 2.52 1.29 5.48 1.29 8 0 1.26.65 2.62.99 4 .99h2v-2h-2zM3.95 19H4c1.6 0 3.02-.88 4-2 .98 1.12 2.4 2 4 2s3.02-.88 4-2c.98 1.12 2.4 2 4 2h.05l1.89-6.68c.08-.26.06-.54-.06-.78s-.34-.42-.6-.5L20 11v-1c0-2.61-1.91-4.78-4.42-5.26L12 1.5 8.42 4.74C5.91 5.22 4 7.39 4 10v1l-1.28.46c-.26.08-.48.26-.6.5s-.14.52-.06.78L3.95 19zM6 10c0-1.66 1.34-3 3-3s3 1.34 3 3v1H6v-1zm8 0c0-1.66 1.34-3 3-3s3 1.34 3 3v1h-6v-1z" /></svg>
+            <svg class="feature-icon" viewBox="0 0 24 24">
+                <path
+                    d="M20 21c-1.39 0-2.78-.47-4-1.32-2.44 1.71-5.56 1.71-8 0C6.78 20.53 5.39 21 4 21H2v2h2c1.38 0 2.74-.35 4-.99 2.52 1.29 5.48 1.29 8 0 1.26.65 2.62.99 4 .99h2v-2h-2zM3.95 19H4c1.6 0 3.02-.88 4-2 .98 1.12 2.4 2 4 2s3.02-.88 4-2c.98 1.12 2.4 2 4 2h.05l1.89-6.68c.08-.26.06-.54-.06-.78s-.34-.42-.6-.5L20 11v-1c0-2.61-1.91-4.78-4.42-5.26L12 1.5 8.42 4.74C5.91 5.22 4 7.39 4 10v1l-1.28.46c-.26.08-.48.26-.6.5s-.14.52-.06.78L3.95 19zM6 10c0-1.66 1.34-3 3-3s3 1.34 3 3v1H6v-1zm8 0c0-1.66 1.34-3 3-3s3 1.34 3 3v1h-6v-1z" />
+            </svg>
             <h3>Marina V&V Privada</h3>
             <p>Acceso a Marina V&V: punto de partida ideal para navegar y explorar..</p>
         </div>
         <div class="feature-card">
-            <svg class="feature-icon" viewBox="0 0 24 24"><path d="M19.5 22h-15c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5h15c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5zM12 2c-4.42 0-8 3.58-8 8s3.58 8 8 8 8-3.58 8-8-3.58-8-8-8zm1 14h-2v-2h2v2zm0-4h-2V7h2v5z" /></svg>
+            <svg class="feature-icon" viewBox="0 0 24 24">
+                <path
+                    d="M19.5 22h-15c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5h15c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5zM12 2c-4.42 0-8 3.58-8 8s3.58 8 8 8 8-3.58 8-8-3.58-8-8-8zm1 14h-2v-2h2v2zm0-4h-2V7h2v5z" />
+            </svg>
             <h3>Amenidades Exclusivas</h3>
             <p>Campo de golf, club de playa, rooftop, gimnasio y canchas de tenis.</p>
         </div>
@@ -387,21 +539,26 @@
 
     <section class="info-row">
         <div class="info-image">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2211.1968949198354!2d-86.80726203735969!3d21.24076565330706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4c2e179d560021%3A0xfd6413ce8aca92a6!2sResidencial%20La%20Amada%2C%2077420%20Residencial%20La%20Amada%2C%20Q.R.!5e0!3m2!1ses-419!2smx!4v1777263752865!5m2!1ses-419!2smx" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2211.1968949198354!2d-86.80726203735969!3d21.24076565330706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4c2e179d560021%3A0xfd6413ce8aca92a6!2sResidencial%20La%20Amada%2C%2077420%20Residencial%20La%20Amada%2C%20Q.R.!5e0!3m2!1ses-419!2smx!4v1777263752865!5m2!1ses-419!2smx"
+                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
         <div class="info-text">
             <h2>Una Ubicación Privilegiada</h2>
-            <p>Situada en la península de <strong>Playa Mujeres</strong>, La Amada te sitúa a solo 15 minutos del centro de Cancún y a 30 minutos del Aeropuerto Internacional.</p>
+            <p>Situada en la península de <strong>Playa Mujeres</strong>, La Amada te sitúa a solo 15 minutos del centro
+                de Cancún y a 30 minutos del Aeropuerto Internacional.</p>
         </div>
     </section>
 
     <section class="info-row reverse">
         <div class="info-image-wall">
-            <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1044990740565083029/original/c932b197-b26b-4ca5-a5cc-19a9f198e7e8.jpeg?im_w=1440" alt="Interior lujoso">
+            <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1044990740565083029/original/c932b197-b26b-4ca5-a5cc-19a9f198e7e8.jpeg?im_w=1440"
+                alt="Interior lujoso">
         </div>
         <div class="info-text">
             <h2>Estilo de Vida y Confort Inigualable</h2>
-            <p>Nuestros departamentos destacan por sus amplias terrazas y acabados de lujo, ofreciendo vistas privilegiadas a la Marina V&V o a la reserva natural.</p>
+            <p>Nuestros departamentos destacan por sus amplias terrazas y acabados de lujo, ofreciendo vistas
+                privilegiadas a la Marina V&V o a la reserva natural.</p>
         </div>
     </section>
 
@@ -409,7 +566,8 @@
         <div class="footer-content">
             <div class="footer-logo">
                 <h4>Kali Rental</h4>
-                <p style="font-size: 0.9rem; margin-top: 10px; color:#fff">Experiencias extraordinarias en cada estancia.</p>
+                <p style="font-size: 0.9rem; margin-top: 10px; color:#fff">Experiencias extraordinarias en cada
+                    estancia.</p>
             </div>
             <div>
                 <h5 style="color: #0eb28d; margin-bottom: 15px;">Contacto</h5>
@@ -434,7 +592,7 @@
             const btnIzq = carrusel.querySelector('.btn-flecha.izq');
             const btnDer = carrusel.querySelector('.btn-flecha.der');
             const contenedor = carrusel.querySelector('.contenedor-propiedades');
-            
+
             if (cards.length === 0) return;
 
             let currentIndex = 0;
@@ -442,7 +600,7 @@
             function updateCarousel() {
                 cards.forEach((card, index) => {
                     card.classList.remove('activa', 'anterior', 'siguiente');
-                    
+
                     if (index === currentIndex) {
                         card.classList.add('activa');
                     } else if (index === (currentIndex - 1 + cards.length) % cards.length) {
@@ -476,7 +634,7 @@
                         updateCarousel();
                     } else {
                         const url = card.getAttribute('data-url');
-                        if(url && url !== "#") window.open(url, '_blank');
+                        if (url && url !== "#") window.open(url, '_blank');
                     }
                 });
             });
@@ -487,13 +645,13 @@
             if (contenedor) {
                 contenedor.addEventListener('touchstart', (e) => {
                     touchStartX = e.changedTouches[0].screenX;
-                }, {passive: true});
+                }, { passive: true });
 
                 contenedor.addEventListener('touchend', (e) => {
                     touchEndX = e.changedTouches[0].screenX;
                     if (touchStartX - touchEndX > 50) irSiguiente();
                     if (touchEndX - touchStartX > 50) irAnterior();
-                }, {passive: true});
+                }, { passive: true });
             }
 
             updateCarousel();
@@ -501,4 +659,5 @@
     </script>
 
 </body>
+
 </html>
