@@ -4,55 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kali Rental | Premium Vacation Accommodations & Luxury Rentals</title>
-    
-    <meta name="description" content="Discover premium vacation accommodations with Kali Rental. Explore luxury apartments, lofts, and villas in Cancún, Holbox, Morelos, and Acapulco. Book your stay today!">
-    
-    <link rel="canonical" href="https://www.kalirental.com/accommodations">
-
-    <link rel="preload" as="image" href="https://a0.muscache.com/im/pictures/7af30ad4-b5c5-498e-9158-9717be648a5b.jpg?im_w=1200">
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      "name": "Kali Rental Accommodations",
-      "description": "Premium vacation accommodations and luxury rentals in Mexico's top destinations.",
-      "mainEntity": {
-        "@type": "ItemList",
-        "name": "Vacation Rentals List",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Playa Mujeres - La Amada Residences",
-            "description": "Luxury and absolute privacy in a gated community with marina and private beach club."
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Puerta del Mar - Amara Cancún",
-            "description": "Exclusive location in Puerto Juárez with direct access to the ferry."
-          },
-          {
-            "@type": "ListItem",
-            "position": 3,
-            "name": "Long Island - Madison",
-            "description": "Central location on the vibrant Av. Huayacán."
-          },
-          {
-            "@type": "ListItem",
-            "position": 4,
-            "name": "Punta Cocos - Yum Balam",
-            "description": "Eco-chic experience in the most untouched area of Holbox."
-          }
-        ]
-      }
-    }
-    </script>
-
+    <title>Pro Properties</title>
     <link rel="stylesheet" href="../css/global.css">
     <style>
+        
+        
         /* ================= HERO SECTION ================= */
         .hero-section {
             position: relative;
@@ -112,6 +68,7 @@
             gap: 12px;
             margin-bottom: 50px;
             margin-top: 70px;
+            /* Adjustment to make room for the navbar */
             width: 100%;
             max-width: 1100px;
             margin-left: auto;
@@ -130,6 +87,7 @@
             cursor: pointer;
             transition: all 0.2s ease;
             text-align: center;
+            /* Ensures the text stays centered when stretched */
         }
 
         .btn-filtro:hover {
@@ -148,6 +106,7 @@
             animation: fadeIn 0.5s ease-out;
             max-width: 1100px;
             margin: 0 auto 60px auto;
+            /* Adjusted to center the container block */
             text-align: center;
         }
 
@@ -169,7 +128,9 @@
 
         .complejo-header {
             margin: 0 0 30px 0;
+            /* Changed to align left */
             max-width: 100%;
+            /* Changed to use the full available width */
             text-align: left;
         }
 
@@ -186,6 +147,7 @@
             color: #717171;
             margin: 0;
             padding-left: 19px;
+            /* To align with the title text after the border */
         }
 
         /* ================= CARD GRID ================= */
@@ -194,7 +156,9 @@
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 32px;
             justify-content: center;
+            /* Centers the cell group */
             justify-items: center;
+            /* Centers the card within its cell */
             text-align: left;
         }
 
@@ -209,7 +173,9 @@
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             cursor: pointer;
             max-width: 400px;
+            /* Adjust this value to the size you want */
             width: 100%;
+            /* Allows it to be responsive on small screens */
         }
 
         .tarjeta:hover {
@@ -228,6 +194,7 @@
             height: 100%;
             object-fit: cover;
             transition: transform 0.6s cubic-bezier(0.2, 0, 0.2, 1);
+
         }
 
         .tarjeta:hover img {
@@ -321,10 +288,11 @@
 
     <nav class="navbar">
         <a href="#" class="nav-brand">
-            <img src="https://a0.muscache.com/im/pictures/user/User/original/4a78e8f5-ff57-4eaf-944d-c89c7b68dfe0.jpeg?im_w=240" alt="Kali Rental Logo" class="logo-nav">
+            <img src="https://a0.muscache.com/im/pictures/user/User/original/4a78e8f5-ff57-4eaf-944d-c89c7b68dfe0.jpeg?im_w=240" alt="Logo" class="logo-nav">
             <span class="brand-name">Kali Rental</span>
         </a>
     </nav>
+
 
     <a href="https://wa.me/521234567890" class="btn-floating btn-whatsapp" target="_blank" rel="noopener noreferrer" data-text="WhatsApp">
         <svg viewBox="0 0 32 32">
@@ -333,7 +301,7 @@
     </a>
     
     <a href="../alojamientos/index.html" class="btn-floating btn-language" data-text="Español">
-        <img src="https://flagcdn.com/w160/mx.png" alt="Bandera de México - Cambiar idioma a Español" loading="lazy">
+        <img src="https://flagcdn.com/w160/mx.png" alt="Bandera de México">
     </a>
     
     <header class="hero-section">
@@ -350,7 +318,7 @@
         <button class="btn-filtro" onclick="filtrarZona('acapulco', this)">Acapulco</button>
     </div>
 
-    <section class="seccion-zona" data-zona="cancun">
+    <div class="seccion-zona" data-zona="cancun">
         <h2 class="zona-titulo">Cancún</h2>
 
         <div class="contenedor-complejo">
@@ -359,10 +327,8 @@
                 <p class="complejo-descripcion">Luxury and absolute privacy in a gated community with marina and private beach club.</p>
             </div>
             <div class="contenedor-propiedades">
-                <article class="tarjeta" onclick="window.location.href='../amada/'">
-                    <div class="imagen-contenedor">
-                        <img src="https://a0.muscache.com/im/pictures/miso/Hosting-1044990740565083029/original/7ea5589f-310e-47d1-831c-da1ea7346a33.jpeg?im_w=1440" alt="Luxurious apartment beach view in Playa Mujeres La Amada" loading="lazy">
-                    </div>
+                <div class="tarjeta" onclick="window.location.href='../amada/'">
+                    <div class="imagen-contenedor"><img src="https://a0.muscache.com/im/pictures/miso/Hosting-1044990740565083029/original/7ea5589f-310e-47d1-831c-da1ea7346a33.jpeg?im_w=1440" alt="Apartment in Playa Mujeres"></div>
                     <div class="contenido">
                         <h3 class="titulo">Luxurious apartment with a beautiful beach</h3>
                         <div class="caracteristicas">
@@ -370,14 +336,11 @@
                             <span class="etiqueta">3 Rooms</span>
                             <span class="etiqueta">2 Bathrooms</span>
                         </div>
-                        <a href="https://www.airbnb.mx/rooms/1044990740565083029" target="_blank" rel="noopener" class="btn-airbnb">Book now</a>
+                        <a href="https://www.airbnb.mx/rooms/1044990740565083029" target="_blank" class="btn-airbnb">Book now</a>
                     </div>
-                </article>
-                
-                <article class="tarjeta" onclick="window.location.href='../amada/'">
-                    <div class="imagen-contenedor">
-                        <img src="https://a0.muscache.com/im/pictures/cd527338-9f0d-4e6a-b32c-2425640e9bc2.jpg?im_w=1440" alt="Luxury penthouse rental at La Amada Residences" loading="lazy">
-                    </div>
+                </div>
+                <div class="tarjeta" onclick="window.location.href='../amada/'">
+                    <div class="imagen-contenedor"><img src="https://a0.muscache.com/im/pictures/cd527338-9f0d-4e6a-b32c-2425640e9bc2.jpg?im_w=1440" alt="La Amada Penthouse"></div>
                     <div class="contenido">
                         <h3 class="titulo">Luxury penthouse in La Amada Residential Complex</h3>
                         <div class="caracteristicas">
@@ -385,14 +348,11 @@
                             <span class="etiqueta">3 Rooms</span>
                             <span class="etiqueta">3 Bathrooms</span>
                         </div>
-                        <a href="https://www.airbnb.mx/rooms/954381545245331717" target="_blank" rel="noopener" class="btn-airbnb">Book now</a>
+                        <a href="https://www.airbnb.mx/rooms/954381545245331717" target="_blank" class="btn-airbnb">Book now</a>
                     </div>
-                </article>
-                
-                <article class="tarjeta" onclick="window.location.href='../amada/'">
-                    <div class="imagen-contenedor">
-                        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6ODUzMDA0NjAyNDY0OTkyMTcw/original/88318ada-d4ec-4340-a69a-3ce789c4f818.jpeg?im_w=1440" alt="Beachfront apartment with private beach access at La Amada" loading="lazy">
-                    </div>
+                </div>
+                <div class="tarjeta" onclick="window.location.href='../amada/'">
+                    <div class="imagen-contenedor"><img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6ODUzMDA0NjAyNDY0OTkyMTcw/original/88318ada-d4ec-4340-a69a-3ce789c4f818.jpeg?im_w=1440" alt="La Amada Luxury"></div>
                     <div class="contenido">
                         <h3 class="titulo">Luxury, comfort and a private beach at La Amada</h3>
                         <div class="caracteristicas">
@@ -400,9 +360,9 @@
                             <span class="etiqueta">2 Rooms</span>
                             <span class="etiqueta">2 Bathrooms</span>
                         </div>
-                        <a href="https://www.airbnb.mx/rooms/853004602464992170" target="_blank" rel="noopener" class="btn-airbnb">Book now</a>
+                        <a href="https://www.airbnb.mx/rooms/853004602464992170" target="_blank" class="btn-airbnb">Book now</a>
                     </div>
-                </article>
+                </div>
             </div>
         </div>
 
@@ -412,9 +372,9 @@
                 <p class="complejo-descripcion">Exclusive location in Puerto Juárez with direct access to the ferry and spectacular views of the Caribbean.</p>
             </div>
             <div class="contenedor-propiedades">
-                <article class="tarjeta" onclick="window.open('', '_blank')">
+                <div class="tarjeta" onclick="window.open('', '_blank')">
                     <div class="imagen-contenedor">
-                        <img src="https://a0.muscache.com/im/pictures/miso/Hosting-918978789461492698/original/d72411ae-f99d-41ba-b3bd-5e1af2614f0c.jpeg?im_w=1200" alt="Amara Apartment rental in Puerto Juarez Cancun" loading="lazy">
+                        <img src="https://a0.muscache.com/im/pictures/miso/Hosting-918978789461492698/original/d72411ae-f99d-41ba-b3bd-5e1af2614f0c.jpeg?im_w=1200" alt="Amara Apartment 1">
                     </div>
                     <div class="contenido">
                         <h3 class="titulo">Apartment in Amara Cancún, puerta del mar</h3>
@@ -423,13 +383,12 @@
                             <span class="etiqueta">1 Room</span>
                             <span class="etiqueta">1 Bathroom</span>
                         </div>
-                        <a href="https://www.airbnb.mx/rooms/918978789461492698" target="_blank" rel="noopener" class="btn-airbnb">Book now</a>
+                        <a href="https://www.airbnb.mx/rooms/918978789461492698" target="_blank" class="btn-airbnb">Book now</a>
                     </div>
-                </article>
-                
-                <article class="tarjeta" onclick="window.open('', '_blank')">
+                </div>
+                <div class="tarjeta" onclick="window.open('', '_blank')">
                     <div class="imagen-contenedor">
-                        <img src="https://a0.muscache.com/im/pictures/miso/Hosting-1007248876379629766/original/f19e7acd-2f65-437d-b1b4-a3f7ef6ed88c.jpeg?im_w=1440" alt="Ocean view vacation rental apartment at Amara Cancun" loading="lazy">
+                        <img src="https://a0.muscache.com/im/pictures/miso/Hosting-1007248876379629766/original/f19e7acd-2f65-437d-b1b4-a3f7ef6ed88c.jpeg?im_w=1440" alt="Amara Apartment 2">
                     </div>
                     <div class="contenido">
                         <h3 class="titulo">Apartment with ocean view in Amara Cancún</h3>
@@ -438,9 +397,9 @@
                             <span class="etiqueta">2 Rooms</span>
                             <span class="etiqueta">2 Bathrooms</span>
                         </div>
-                        <a href="https://www.airbnb.mx/rooms/1007248876379629766" target="_blank" rel="noopener" class="btn-airbnb">Book now</a>
+                        <a href="https://www.airbnb.mx/rooms/1007248876379629766" target="_blank" class="btn-airbnb">Book now</a>
                     </div>
-                </article>
+                </div>
             </div>
         </div>
 
@@ -450,10 +409,8 @@
                 <p class="complejo-descripcion">Central location on the vibrant Av. Huayacán, ideal for families and dynamic stays.</p>
             </div>
             <div class="contenedor-propiedades">
-                <article class="tarjeta" onclick="window.open('', '_blank')">
-                    <div class="imagen-contenedor">
-                        <img src="https://a0.muscache.com/im/pictures/miso/Hosting-646553604770000453/original/e9e7df4e-832c-4596-b25f-f99f81bb7d48.jpeg?im_w=1440" alt="Modern ground-floor rental apartment at Long Island Madison" loading="lazy">
-                    </div>
+                <div class="tarjeta" onclick="window.open('', '_blank')">
+                    <div class="imagen-contenedor"><img src="https://a0.muscache.com/im/pictures/miso/Hosting-646553604770000453/original/e9e7df4e-832c-4596-b25f-f99f81bb7d48.jpeg?im_w=1440" alt="Madison"></div>
                     <div class="contenido">
                         <h3 class="titulo">Modern ground-floor apartment with pool</h3>
                         <div class="caracteristicas">
@@ -461,14 +418,14 @@
                             <span class="etiqueta">2 Rooms</span>
                             <span class="etiqueta">2 Bathrooms</span>
                         </div>
-                        <a href="https://www.airbnb.mx/rooms/646553604770000453?source_impression_id=p3_1776879540_P3sPjjskm4gCSUDt" target="_blank" rel="noopener" class="btn-airbnb">Book now</a>
+                        <a href="https://www.airbnb.mx/rooms/646553604770000453?source_impression_id=p3_1776879540_P3sPjjskm4gCSUDt" class="btn-airbnb">Book now</a>
                     </div>
-                </article>
+                </div>
             </div>
         </div>
-    </section>
+    </div>
 
-    <section class="seccion-zona" data-zona="holbox">
+    <div class="seccion-zona" data-zona="holbox">
         <h2 class="zona-titulo">Holbox</h2>
         <div class="contenedor-complejo">
             <div class="complejo-header">
@@ -476,10 +433,8 @@
                 <p class="complejo-descripcion">Eco-chic experience in the most untouched area of Holbox, famous for its sunsets.</p>
             </div>
             <div class="contenedor-propiedades">
-                <article class="tarjeta" onclick="window.open('', '_blank')">
-                    <div class="imagen-contenedor">
-                        <img src="https://a0.muscache.com/im/pictures/miso/Hosting-1113881946483557614/original/6e8e77cc-9b6e-4b0f-9456-86a582d74585.jpeg?im_w=1440" alt="Eco-chic loft rental in Punta Cocos Holbox" loading="lazy">
-                    </div>
+                <div class="tarjeta" onclick="window.open('', '_blank')">
+                    <div class="imagen-contenedor"><img src="https://a0.muscache.com/im/pictures/miso/Hosting-1113881946483557614/original/6e8e77cc-9b6e-4b0f-9456-86a582d74585.jpeg?im_w=1440" alt="Yum Balam Suite"></div>
                     <div class="contenido">
                         <h3 class="titulo">Entire place: loft in Holbox, Mexico</h3>
                         <div class="caracteristicas">
@@ -487,14 +442,11 @@
                             <span class="etiqueta">1 Bedroom</span>
                             <span class="etiqueta">1 Bathroom</span>
                         </div>
-                        <a href="https://www.airbnb.mx/rooms/1113881946483557614?source_impression_id=p3_1776880160_P3v19nWUy9FFZN7p" target="_blank" rel="noopener" class="btn-airbnb">Book now</a>
+                        <a href="https://www.airbnb.mx/rooms/1113881946483557614?source_impression_id=p3_1776880160_P3v19nWUy9FFZN7p" class="btn-airbnb">Book now</a>
                     </div>
-                </article>
-                
-                <article class="tarjeta" onclick="window.open('', '_blank')">
-                    <div class="imagen-contenedor">
-                        <img src="https://a0.muscache.com/im/pictures/faf3b9c0-44d9-4842-a165-983f157c9977.jpg?im_w=1440" alt="Entire apartment loft vacation rental in Holbox" loading="lazy">
-                    </div>
+                </div>
+                <div class="tarjeta" onclick="window.open('', '_blank')">
+                    <div class="imagen-contenedor"><img src="https://a0.muscache.com/im/pictures/faf3b9c0-44d9-4842-a165-983f157c9977.jpg?im_w=1440" alt="Yum Balam Suite"></div>
                     <div class="contenido">
                         <h3 class="titulo">Entire place: loft in Holbox, Mexico</h3>
                         <div class="caracteristicas">
@@ -502,14 +454,14 @@
                             <span class="etiqueta">1 Bedroom</span>
                             <span class="etiqueta">1 Bathroom</span>
                         </div>
-                        <a href="https://www.airbnb.mx/rooms/1104322507951986184?source_impression_id=p3_1776880219_P3zPbZz9HocgQurL" target="_blank" rel="noopener" class="btn-airbnb">Book now</a>
+                        <a href="https://www.airbnb.mx/rooms/1104322507951986184?source_impression_id=p3_1776880219_P3zPbZz9HocgQurL" class="btn-airbnb">Book now</a>
                     </div>
-                </article>
+                </div>
             </div>
         </div>
-    </section>
+    </div>
 
-    <section class="seccion-zona" data-zona="morelos">
+    <div class="seccion-zona" data-zona="morelos">
         <h2 class="zona-titulo">Morelos</h2>
         <div class="contenedor-complejo">
             <div class="complejo-header">
@@ -517,10 +469,8 @@
                 <p class="complejo-descripcion">Colonial-style residences in a safe and relaxed environment, perfect for families.</p>
             </div>
             <div class="contenedor-propiedades">
-                <article class="tarjeta" onclick="window.open('', '_blank')">
-                    <div class="imagen-contenedor">
-                        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-587567877948882472/original/76a4883e-2458-45d4-a6f1-2b8bcb82d2f8.jpeg?im_w=960" alt="Historic colonial style residence house in Hacienda Viveros de Cocoyoc" loading="lazy">
-                    </div>
+                <div class="tarjeta" onclick="window.open('', '_blank')">
+                    <div class="imagen-contenedor"><img src="https://a0.muscache.com/im/pictures/hosting/Hosting-587567877948882472/original/76a4883e-2458-45d4-a6f1-2b8bcb82d2f8.jpeg?im_w=960" alt="Historic Residence"></div>
                     <div class="contenido">
                         <h3 class="titulo">Amazing house in Hacienda Viveros de Cocoyoc</h3>
                         <div class="caracteristicas">
@@ -528,14 +478,11 @@
                             <span class="etiqueta">4 Rooms</span>
                             <span class="etiqueta">3 Bathrooms</span>
                         </div>
-                        <a href="https://www.airbnb.mx/rooms/587567877948882472?source_impression_id=p3_1776887030_P36AumHdwVVTWkY9" target="_blank" rel="noopener" class="btn-airbnb">Book now</a>
+                        <a href="https://www.airbnb.mx/rooms/587567877948882472?source_impression_id=p3_1776887030_P36AumHdwVVTWkY9" class="btn-airbnb">Book now</a>
                     </div>
-                </article>
-                
-                <article class="tarjeta" onclick="window.open('', '_blank')">
-                    <div class="imagen-contenedor">
-                        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1638666403932647175/original/a5672385-071d-43d8-b967-9b30ae39bcdf.jpeg?im_w=960" alt="Colonial luxury family home in Cocoyoc Morelos" loading="lazy">
-                    </div>
+                </div>
+                <div class="tarjeta" onclick="window.open('', '_blank')">
+                    <div class="imagen-contenedor"><img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1638666403932647175/original/a5672385-071d-43d8-b967-9b30ae39bcdf.jpeg?im_w=960" alt="Colonial House"></div>
                     <div class="contenido">
                         <h3 class="titulo">House in Hacienda Viveros de Cocoyoc</h3>
                         <div class="caracteristicas">
@@ -543,9 +490,9 @@
                             <span class="etiqueta">5 Rooms</span>
                             <span class="etiqueta">4 Bathrooms</span>
                         </div>
-                        <a href="https://www.airbnb.mx/rooms/1638666403932647175?source_impression_id=p3_1776887180_P3GTGhCYTPU7ZSlh" target="_blank" rel="noopener" class="btn-airbnb">Book now</a>
+                        <a href="https://www.airbnb.mx/rooms/1638666403932647175?source_impression_id=p3_1776887180_P3GTGhCYTPU7ZSlh" class="btn-airbnb">Book now</a>
                     </div>
-                </article>
+                </div>
             </div>
         </div>
         <div class="contenedor-complejo">
@@ -554,10 +501,8 @@
                 <p class="complejo-descripcion">Vacation homes with the best weather in the world and close to Six Flags Hurricane Harbor.</p>
             </div>
             <div class="contenedor-propiedades">
-                <article class="tarjeta" onclick="window.open('', '_blank')">
-                    <div class="imagen-contenedor">
-                        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1398712581243603123/original/dcefd053-63c3-4500-9912-1b9a44aa31a1.jpeg?im_w=1440" alt="Rooftop apartment vacation home in Colinas de Oaxtepec" loading="lazy">
-                    </div>
+                <div class="tarjeta" onclick="window.open('', '_blank')">
+                    <div class="imagen-contenedor"><img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1398712581243603123/original/dcefd053-63c3-4500-9912-1b9a44aa31a1.jpeg?im_w=1440" alt="Oaxtepec House A"></div>
                     <div class="contenido">
                         <h3 class="titulo">Apartment with rooftop in Colinas de Oaxtepec</h3>
                         <div class="caracteristicas">
@@ -565,14 +510,11 @@
                             <span class="etiqueta">3 Rooms</span>
                             <span class="etiqueta">2 Bathrooms</span>
                         </div>
-                        <a href="https://www.airbnb.mx/rooms/1395252117345365812?source_impression_id=p3_1776888715_P3KkikznzSpPxzvS" target="_blank" rel="noopener" class="btn-airbnb">Book now</a>
+                        <a href="https://www.airbnb.mx/rooms/1395252117345365812?source_impression_id=p3_1776888715_P3KkikznzSpPxzvS" class="btn-airbnb">Book now</a>
                     </div>
-                </article>
-                
-                <article class="tarjeta" onclick="window.open('', '_blank')">
-                    <div class="imagen-contenedor">
-                        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTM5NTI1MjExNzM0NTM2NTgxMg==/original/63f35857-befe-45d1-89f4-6317c5b6acfa.jpeg?im_w=1440" alt="Premium rental apartment with rooftop in Oaxtepec" loading="lazy">
-                    </div>
+                </div>
+                <div class="tarjeta" onclick="window.open('', '_blank')">
+                    <div class="imagen-contenedor"><img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTM5NTI1MjExNzM0NTM2NTgxMg==/original/63f35857-befe-45d1-89f4-6317c5b6acfa.jpeg?im_w=1440" alt="Oaxtepec House B"></div>
                     <div class="contenido">
                         <h3 class="titulo">Apartment with rooftop in Colinas de Oaxtepec</h3>
                         <div class="caracteristicas">
@@ -580,14 +522,11 @@
                             <span class="etiqueta">3 Rooms</span>
                             <span class="etiqueta">2 Bathrooms</span>
                         </div>
-                        <a href="https://www.airbnb.mx/rooms/1398712581243603123?source_impression_id=p3_1776888877_P3QuzY0Gv-MfxNax" target="_blank" rel="noopener" class="btn-airbnb">Book now</a>
+                        <a href="https://www.airbnb.mx/rooms/1398712581243603123?source_impression_id=p3_1776888877_P3QuzY0Gv-MfxNax" class="btn-airbnb">Book now</a>
                     </div>
-                </article>
-                
-                <article class="tarjeta" onclick="window.open('', '_blank')">
-                    <div class="imagen-contenedor">
-                        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1398712581243603123/original/6c2bfe03-c2aa-4f40-9f4e-76849c8d4a0d.jpeg?im_w=1200" alt="Comfortable rooftop apartment rental in Oaxtepec Morelos" loading="lazy">
-                    </div>
+                </div>
+                <div class="tarjeta" onclick="window.open('', '_blank')">
+                    <div class="imagen-contenedor"><img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1398712581243603123/original/6c2bfe03-c2aa-4f40-9f4e-76849c8d4a0d.jpeg?im_w=1200" alt="Oaxtepec House C"></div>
                     <div class="contenido">
                         <h3 class="titulo">Apartment with rooftop in Colinas de Oaxtepec</h3>
                         <div class="caracteristicas">
@@ -595,14 +534,11 @@
                             <span class="etiqueta">3 Rooms</span>
                             <span class="etiqueta">2 Bathrooms</span>
                         </div>
-                        <a href="https://www.airbnb.mx/rooms/1398816873367801288?source_impression_id=p3_1776889066_P3NZ0g-rJkyunRvQ" target="_blank" rel="noopener" class="btn-airbnb">Book now</a>
+                        <a href="https://www.airbnb.mx/rooms/1398816873367801288?source_impression_id=p3_1776889066_P3NZ0g-rJkyunRvQ" class="btn-airbnb">Book now</a>
                     </div>
-                </article>
-                
-                <article class="tarjeta" onclick="window.open('', '_blank')">
-                    <div class="imagen-contenedor">
-                        <img src="https://a0.muscache.com/im/pictures/miso/Hosting-1392991346137350741/original/b908d8e4-eefa-41bf-8df6-31680fcc8884.jpeg?im_w=960" alt="Beautiful vacation apartment in Colinas de Oaxtepec" loading="lazy">
-                    </div>
+                </div>
+                <div class="tarjeta" onclick="window.open('', '_blank')">
+                    <div class="imagen-contenedor"><img src="https://a0.muscache.com/im/pictures/miso/Hosting-1392991346137350741/original/b908d8e4-eefa-41bf-8df6-31680fcc8884.jpeg?im_w=960" alt="Oaxtepec House D"></div>
                     <div class="contenido">
                         <h3 class="titulo">Beautiful apartment in Colinas de Oaxtepec</h3>
                         <div class="caracteristicas">
@@ -610,14 +546,11 @@
                             <span class="etiqueta">3 Rooms</span>
                             <span class="etiqueta">2 Bathrooms</span>
                         </div>
-                        <a href="https://www.airbnb.mx/rooms/1392991346137350741?source_impression_id=p3_1776889228_P355QfvuBoQCHRph" target="_blank" rel="noopener" class="btn-airbnb">Book now</a>
+                        <a href="https://www.airbnb.mx/rooms/1392991346137350741?source_impression_id=p3_1776889228_P355QfvuBoQCHRph" class="btn-airbnb">Book now</a>
                     </div>
-                </article>
-                
-                <article class="tarjeta" onclick="window.open('', '_blank')">
-                    <div class="imagen-contenedor">
-                        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTM5NDUxMTI4ODQ0MDUwMDYwNA==/original/6369b920-76bc-4a3b-aef0-0ff03a0da7b7.jpeg?im_w=1440" alt="Amazing modern rental apartment in Oaxtepec" loading="lazy">
-                    </div>
+                </div>
+                <div class="tarjeta" onclick="window.open('', '_blank')">
+                    <div class="imagen-contenedor"><img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTM5NDUxMTI4ODQ0MDUwMDYwNA==/original/6369b920-76bc-4a3b-aef0-0ff03a0da7b7.jpeg?im_w=1440" alt="Oaxtepec House E"></div>
                     <div class="contenido">
                         <h3 class="titulo">Amazing apartment in Colinas de Oaxtepec</h3>
                         <div class="caracteristicas">
@@ -625,14 +558,11 @@
                             <span class="etiqueta">3 Rooms</span>
                             <span class="etiqueta">2 Bathrooms</span>
                         </div>
-                        <a href="https://www.airbnb.mx/rooms/1394511288440500604?source_impression_id=p3_1776889330_P3P-3ZKyWo-wLkjb" target="_blank" rel="noopener" class="btn-airbnb">Book now</a>
+                        <a href="https://www.airbnb.mx/rooms/1394511288440500604?source_impression_id=p3_1776889330_P3P-3ZKyWo-wLkjb" class="btn-airbnb">Book now</a>
                     </div>
-                </article>
-                
-                <article class="tarjeta" onclick="window.open('', '_blank')">
-                    <div class="imagen-contenedor">
-                        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTM5NTA4OTMxOTU4MjI4MzEyMw==/original/d90297e1-6976-4e0d-a971-69fdc089af05.jpeg?im_w=1440" alt="Luxury apartment stay in Colinas de Oaxtepec Morelos" loading="lazy">
-                    </div>
+                </div>
+                <div class="tarjeta" onclick="window.open('', '_blank')">
+                    <div class="imagen-contenedor"><img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTM5NTA4OTMxOTU4MjI4MzEyMw==/original/d90297e1-6976-4e0d-a971-69fdc089af05.jpeg?im_w=1440" alt="Private Villa Oaxtepec"></div>
                     <div class="contenido">
                         <h3 class="titulo">Amazing apartment in Colinas de Oaxtepec</h3>
                         <div class="caracteristicas">
@@ -640,14 +570,14 @@
                             <span class="etiqueta">3 Rooms</span>
                             <span class="etiqueta">2 Bathrooms</span>
                         </div>
-                        <a href="https://www.airbnb.mx/rooms/1395089319582283123?source_impression_id=p3_1776889603_P3cHYrguIXbNpPxt" target="_blank" rel="noopener" class="btn-airbnb">Book now</a>
+                        <a href="https://www.airbnb.mx/rooms/1395089319582283123?source_impression_id=p3_1776889603_P3cHYrguIXbNpPxt" class="btn-airbnb">Book now</a>
                     </div>
-                </article>
+                </div>
             </div>
         </div>
-    </section>
+    </div>
 
-    <section class="seccion-zona" data-zona="acapulco">
+    <div class="seccion-zona" data-zona="acapulco">
         <h2 class="zona-titulo">Acapulco</h2>
         <div class="contenedor-complejo">
             <div class="complejo-header">
@@ -655,10 +585,8 @@
                 <p class="complejo-descripcion">Unmatched views of Acapulco Bay in the exclusive Scenic area.</p>
             </div>
             <div class="contenedor-propiedades">
-                <article class="tarjeta" onclick="window.open('', '_blank')">
-                    <div class="imagen-contenedor">
-                        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-756445041797601962/original/5333397b-e5e7-4a6d-b2d4-538b74c8d8ac.jpeg?im_w=1440" alt="Spacious ocean view apartment with pool in Acapulco Castillo Azul" loading="lazy">
-                    </div>
+                <div class="tarjeta" onclick="window.open('', '_blank')">
+                    <div class="imagen-contenedor"><img src="https://a0.muscache.com/im/pictures/hosting/Hosting-756445041797601962/original/5333397b-e5e7-4a6d-b2d4-538b74c8d8ac.jpeg?im_w=1440" alt="Yum Balam Suite"></div>
                     <div class="contenido">
                         <h3 class="titulo">Spacious and beautiful apartment with pool</h3>
                         <div class="caracteristicas">
@@ -666,12 +594,12 @@
                             <span class="etiqueta">3 Bedrooms</span>
                             <span class="etiqueta">3 Bathrooms</span>
                         </div>
-                        <a href="https://www.airbnb.mx/rooms/756445041797601962?source_impression_id=p3_1776890204_P3NpkjH9HieZ1dP-" target="_blank" rel="noopener" class="btn-airbnb">Book now</a>
+                        <a href="https://www.airbnb.mx/rooms/756445041797601962?source_impression_id=p3_1776890204_P3NpkjH9HieZ1dP-" class="btn-airbnb">Book now</a>
                     </div>
-                </article>
+                </div>
             </div>
         </div>
-    </section>
+    </div>
     
     <footer>
         <div class="footer-content">
