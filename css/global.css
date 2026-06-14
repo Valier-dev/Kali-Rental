@@ -32,6 +32,16 @@
     gap: 12px;
 }
 
+.brand-name {
+    font-family: 'Century Gothic', AppleGothic, sans-serif;
+    color: #ffffff;
+    font-size: 1.6rem;
+    margin-left: 15px;
+    letter-spacing: 1px;
+    font-weight: normal;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
 .nav-menu {
     display: flex;
     list-style: none;
@@ -68,16 +78,6 @@
     border-radius: 50%;
     border: 2px solid #ffffff;
     object-fit: cover;
-}
-
-.brand-name {
-    font-family: 'Century Gothic', AppleGothic, sans-serif;
-    color: #ffffff;
-    font-size: 1.6rem;
-    margin-left: 15px;
-    letter-spacing: 1px;
-    font-weight: normal;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
 }
 
 /* ================= BOTONES FLOTANTES (CLASE BASE) ================= */
