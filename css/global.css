@@ -16,10 +16,11 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
+    justify-content: space-between;
     display: flex;
     align-items: center;
-    padding: 20px 40px;
+    padding: 20px 10%;
     z-index: 100;
     box-sizing: border-box;
 }
@@ -28,6 +29,37 @@
     display: flex;
     align-items: center;
     text-decoration: none;
+    gap: 12px;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item a {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: color 0.3s ease;
+}
+
+.nav-item a:hover {
+    color: #d4af37;
+}
+
+/* Indicador visual de la página actual */
+.nav-item a.active {
+    color: #d4af37;
+    border-bottom: 2px solid #d4af37;
+    padding-bottom: 4px;
 }
 
 .logo-nav {
@@ -171,7 +203,13 @@
 /* ================= RESPONSIVE (MÓVILES) ================= */
 @media (max-width: 768px) {
     .navbar {
-        padding: 15px 20px;
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px 5%;
+    }
+
+    .nav-menu {
+        gap: 20px;
     }
 
     .brand-name {
