@@ -1,67 +1,94 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+    <title>Preguntas Frecuentes | Kali Rental | Alojamientos Exclusivos en México</title>
+    <meta name="description"
+        content="Resuelve tus dudas sobre el proceso de reserva, políticas de check-in, check-out y amenidades de nuestras estancias de lujo con Kali Rental.">
+    <link rel="canonical" href="https://www.kalirental.com/preguntas-frecuentes.html">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/global.css">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LodgingBusiness",
+      "name": "Kali Rental",
+      "description": "Estancias de lujo y alojamientos exclusivos en los mejores destinos de México con calidad Superhost.",
+      "url": "https://www.kalirental.com/",
+      "telephone": "+525645656077",
+      "email": "reservations@kalirental.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "MX"
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "¿Cómo puedo realizar una reservación con Kali Rental?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Puedes realizar tu reserva de manera segura haciendo clic en nuestro botón de 'Alojamientos', el cual te redirigirá a nuestros perfiles oficiales respaldados por la plataforma mundial de Airbnb."
+        }
+      },{
+        "@type": "Question",
+        "name": "¿Cuáles son los horarios de Check-in y Check-out?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Por política general, el horario de Check-in es a partir de las 15:00 hrs y el Check-out debe realizarse antes de las 11:00 hrs. Si requieres flexibilidad, por favor contáctanos con anticipación para revisar disponibilidad."
+        }
+      },{
+        "@type": "Question",
+        "name": "¿Qué garantía de limpieza ofrecen en las propiedades?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Contamos con estrictos protocolos de sanitización e higiene profunda antes de la llegada de cada huésped. Garantizamos espacios impecables y completamente preparados para tu estancia."
+        }
+      },{
+        "@type": "Question",
+        "name": "¿Las propiedades cuentan con conectividad a Internet?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí, todas nuestras estancias de alta gama están equipadas con Wi-Fi de alta velocidad, diseñado para superar las expectativas tanto de los viajeros de placer como de aquellos que realizan home office."
+        }
+      }]
+    }
+    </script>
 
     <style>
-
-
-        /* ================= BARRA DE NAVEGACIÓN ================= */
-        .navbar {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            padding: 20px 40px;
-            z-index: 100;
-            box-sizing: border-box;
-        }
-
-        .nav-brand {
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-        }
-
-        .logo-nav {
-            width: 55px;
-            height: 55px;
-            border-radius: 50%;
-            border: 2px solid #ffffff;
-            object-fit: cover;
-        }
-
-        .brand-name {
-            font-family: 'Century Gothic', AppleGothic, sans-serif; 
-            color: #ffffff;
-            font-size: 1.6rem;
-            margin-left: 15px;
-            letter-spacing: 1px;
-            font-weight: normal;
-            text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
-        }
-
-        /* ================= HERO SECTION ================= */
+        /* --- HERO SECTION --- */
         .hero-section {
             position: relative;
             width: 100vw;
-            min-height: 35vh;
+            min-height: 60vh;
+            /* Ajustado ligeramente para páginas internas */
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-                        url('https://a0.muscache.com/im/pictures/7af30ad4-b5c5-498e-9158-9717be648a5b.jpg?im_w=1200');
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                url('https://a0.muscache.com/im/pictures/7af30ad4-b5c5-498e-9158-9717be648a5b.jpg?im_w=1200');
             background-size: cover;
             background-position: center;
         }
 
         .hero-content {
-            padding: 10px;
+            padding: 20px;
             max-width: 850px;
             z-index: 2;
         }
@@ -79,7 +106,7 @@
             font-size: clamp(1.1rem, 2.5vw, 1.3rem);
             font-weight: 400;
             margin-bottom: 35px;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
         }
 
         .btn {
@@ -101,276 +128,240 @@
             transform: scale(1.05);
         }
 
-        /* ================= PREGUNTAS FRECUENTES (FAQ) ================= */
-        .faq-section {
+        /* --- SECCIONES DE CONTENIDO --- */
+        .section-padding {
             padding: 80px 10%;
+        }
+
+        .faq-intro-section {
+            text-align: center;
+            background-color: #fff;
+            padding-bottom: 20px;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.8rem, 4vw, 2.6rem);
+            color: #1a1a1a;
+            margin-bottom: 25px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #444;
             max-width: 900px;
             margin: 0 auto;
         }
 
+        /* --- DISEÑO DE ACORDEÓN DE PREGUNTAS FRECUENTES --- */
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto 80px auto;
+            padding: 0 10%;
+        }
+
+        .faq-category-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            color: #d4af37;
+            margin: 40px 0 20px 0;
+            border-bottom: 1px solid #e1e1e1;
+            padding-bottom: 10px;
+        }
+
         .faq-item {
             background: #ffffff;
-            border-radius: 12px;
-            margin-bottom: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            border-left: 4px solid transparent;
-            transition: all 0.3s ease;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+            border: 1px solid #eef0f2;
             overflow: hidden;
+            transition: all 0.3s ease;
         }
 
-        .faq-item:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+        .faq-item[open] {
+            border-color: #d4af37;
+            box-shadow: 0 4px 20px rgba(212, 175, 55, 0.1);
         }
 
-        .faq-item.active {
-            border-left: 4px solid #0eb28d;
-        }
-
-        .faq-question {
-            padding: 22px 30px;
-            width: 100%;
-            text-align: left;
-            background: none;
-            border: none;
-            outline: none;
-            font-size: 1.1rem;
+        .faq-item summary {
+            padding: 22px 25px;
             font-family: 'Montserrat', sans-serif;
             font-weight: 600;
+            font-size: 1.05rem;
             color: #1a1a1a;
             cursor: pointer;
+            list-style: none;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            transition: color 0.3s ease;
         }
 
-        .faq-item.active .faq-question {
-            color: #0eb28d;
+        /* Eliminar flecha por defecto en navegadores basados en webkit */
+        .faq-item summary::-webkit-details-marker {
+            display: none;
         }
 
-        .faq-question::after {
+        /* Icono personalizado de apertura/cierre */
+        .faq-item summary::after {
             content: '+';
-            font-size: 26px;
+            font-size: 1.4rem;
+            color: #d4af37;
             font-weight: 300;
-            color: #0eb28d;
             transition: transform 0.3s ease;
         }
 
-        .faq-item.active .faq-question::after {
-            transform: rotate(45deg);
+        .faq-item[open] summary::after {
+            content: '−';
+            transform: rotate(180deg);
         }
 
         .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.4s ease;
-        }
-
-        .faq-answer p {
-            padding: 0 30px 25px 30px;
+            padding: 0 25px 25px 25px;
             margin: 0;
-            color: #444;
-            font-size: 1.05rem;
-            line-height: 1.8;
-            font-weight: 400;
+            font-size: 1rem;
+            line-height: 1.7;
+            color: #555;
         }
 
-        /* ================= FOOTER ================= */
-        footer {
-            background-color: #1a1a1a;
-            color: #ddd;
-            padding: 60px 10% 20px;
-            text-align: center;
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
-            text-align: left;
-        }
-
-        .footer-logo h4 {
-            font-family: 'Playfair Display', serif;
-            color: #0eb28d;
-            font-size: 1.5rem;
-            margin: 0;
-        }
-
-        .footer-text {
-            font-size: 0.9rem;
-            color: #fff;
-            line-height: 1.6;
-        }
-
-        .copyright {
-            border-top: 1px solid #333;
-            padding-top: 20px;
-            font-size: 0.8rem;
-            color: #777;
-        }
-        
-        /* ================= BOTÓN WHATSAPP FLOTANTE ================= */
-        .btn-whatsapp {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            width: 60px;
-            height: 60px;
-            background-color: #25d366;
-            color: #FFF;
-            border-radius: 50px;
-            text-align: center;
-            font-size: 30px;
-            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-            z-index: 9999;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transition: transform 0.3s ease;
-            text-decoration: none;
-        }
-
-        .btn-whatsapp:hover {
-            transform: scale(1.1);
-            background-color: #128c7e;
-        }
-
-        .btn-whatsapp svg {
-            width: 35px;
-            height: 35px;
-            fill: white;
-        }
-
-        /* ================= RESPONSIVO ================= */
-        @media (max-width: 768px) {
-            .navbar { padding: 15px 20px; }
-            .brand-name { font-size: 1.2rem; }
-            .faq-section { padding: 60px 5%; }
-            .faq-question { font-size: 1rem; padding: 18px 20px; }
-            .faq-answer p { padding: 0 20px 20px 20px; font-size: 0.95rem; }
-            
-            .btn-whatsapp {
-                width: 70px;
-                height: 70px;
-                bottom: 20px;
-                right: 20px;
-            }
-
-            .btn-whatsapp svg {
-                width: 55%;
-                height: auto;
-                aspect-ratio: 1 / 1;
-            }
+        .faq-answer strong {
+            color: #1a1a1a;
         }
     </style>
 </head>
+
 <body>
 
     <nav class="navbar">
         <a href="#" class="nav-brand">
-            <img src="https://a0.muscache.com/im/pictures/user/User/original/4a78e8f5-ff57-4eaf-944d-c89c7b68dfe0.jpeg?im_w=240" alt="Logo" class="logo-nav">
+            <img src="https://a0.muscache.com/im/pictures/user/User/original/4a78e8f5-ff57-4eaf-944d-c89c7b68dfe0.jpeg?im_w=240"
+                alt="Logo oficial de Kali Rental" class="logo-nav" width="40" height="40">
             <span class="brand-name">Kali Rental</span>
         </a>
+        <ul class="nav-menu">
+            <li class="nav-item"><a href="../index.html">Inicio</a></li>
+            <li class="nav-item"><a href="../es/alojamientos.html">Alojamientos</a></li>
+            <li class="nav-item"><a href="../es/faq.html" class="active">FAQ</a></li>
+        </ul>
     </nav>
-    
-    <a href="https://wa.me/5256456077" class="btn-whatsapp" target="_blank" rel="noopener noreferrer">
+
+    <a href="https://wa.me/525645656077" class="btn-floating btn-whatsapp" target="_blank" rel="noopener noreferrer"
+        data-text="WhatsApp" aria-label="Contactar a Kali Rental por WhatsApp">
         <svg viewBox="0 0 32 32">
-            <path d="M26.576 5.363c-2.69-2.69-6.406-4.354-10.511-4.354-8.209 0-14.865 6.655-14.865 14.865 0 2.732 0.737 5.291 2.022 7.491l-0.038-0.070-2.109 7.702 7.879-2.067c2.051 1.139 4.498 1.809 7.102 1.809h0.006c8.209-0.003 14.862-6.659 14.862-14.868 0-4.103-1.662-7.817-4.349-10.507l0 0zM16.062 28.228h-0.005c-0 0-0.001 0-0.001 0-2.319 0-4.489-0.64-6.342-1.753l0.056 0.031-0.451-0.267-4.675 1.227 1.247-4.559-0.294-0.467c-1.185-1.862-1.889-4.131-1.889-6.565 0-6.822 5.531-12.353 12.353-12.353s12.353 5.531 12.353 12.353c0 6.822-5.53 12.353-12.353 12.353h-0zM22.838 18.977c-0.371-0.186-2.197-1.083-2.537-1.208-0.341-0.124-0.589-0.185-0.837 0.187-0.246 0.371-0.958 1.207-1.175 1.455-0.216 0.249-0.434 0.279-0.805 0.094-1.15-0.466-2.138-1.087-2.997-1.852l0.010 0.009c-0.799-0.74-1.484-1.587-2.037-2.521l-0.028-0.052c-0.216-0.371-0.023-0.572 0.162-0.757 0.167-0.166 0.372-0.434 0.557-0.65 0.146-0.179 0.271-0.384 0.366-0.604l0.006-0.017c0.043-0.087 0.068-0.188 0.068-0.296 0-0.131-0.037-0.253-0.101-0.357l0.002 0.003c-0.094-0.186-0.836-2.014-1.145-2.758-0.302-0.724-0.609-0.625-0.836-0.637-0.216-0.010-0.464-0.012-0.712-0.012-0.395 0.010-0.746 0.188-0.988 0.463l-0.001 0.002c-0.802 0.761-1.3 1.834-1.3 3.023 0 0.026 0 0.053 0.001 0.079l-0-0.004c0.131 1.467 0.681 2.784 1.527 3.857l-0.012-0.015c1.604 2.379 3.742 4.282 6.251 5.564l0.094 0.043c0.548 0.248 1.25 0.513 1.968 0.74l0.149 0.041c0.442 0.14 0.951 0.221 1.479 0.221 0.303 0 0.601-0.027 0.889-0.078l-0.031 0.004c1.069-0.223 1.956-0.868 2.497-1.749l0.009-0.017c0.165-0.366 0.261-0.793 0.261-1.242 0-0.185-0.016-0.366-0.047-0.542l0.003 0.019c-0.092-0.155-0.34-0.247-0.712-0.434z"></path>
+            <path
+                d="M26.576 5.363c-2.69-2.69-6.406-4.354-10.511-4.354-8.209 0-14.865 6.655-14.865 14.865 0 2.732 0.737 5.291 2.022 7.491l-0.038-0.070-2.109 7.702 7.879-2.067c2.051 1.139 4.498 1.809 7.102 1.809h0.006c8.209-0.003 14.862-6.659 14.862-14.868 0-4.103-1.662-7.817-4.349-10.507l0 0zM16.062 28.228h-0.005c-0 0-0.001 0-0.001 0-2.319 0-4.489-0.64-6.342-1.753l0.056 0.031-0.451-0.267-4.675 1.227 1.247-4.559-0.294-0.467c-1.185-1.862-1.889-4.131-1.889-6.565 0-6.822 5.531-12.353 12.353-12.353s12.353 5.531 12.353 12.353c0 6.822-5.53 12.353-12.353 12.353h-0zM22.838 18.977c-0.371-0.186-2.197-1.083-2.537-1.208-0.341-0.124-0.589-0.185-0.837 0.187-0.246 0.371-0.958 1.207-1.175 1.455-0.216 0.249-0.434 0.279-0.805 0.094-1.15-0.466-2.138-1.087-2.997-1.852l0.010 0.009c-0.799-0.74-1.484-1.587-2.037-2.521l-0.028-0.052c-0.216-0.371-0.023-0.572 0.162-0.757 0.167-0.166 0.372-0.434 0.557-0.65 0.146-0.179 0.271-0.384 0.366-0.604l0.006-0.017c0.043-0.087 0.068-0.188 0.068-0.296 0-0.131-0.037-0.253-0.101-0.357l0.002 0.003c-0.094-0.186-0.836-2.014-1.145-2.758-0.302-0.724-0.609-0.625-0.836-0.637-0.216-0.010-0.464-0.012-0.712-0.012-0.395 0.010-0.746 0.188-0.988 0.463l-0.001 0.002c-0.802 0.761-1.3 1.834-1.3 3.023 0 0.026 0 0.053 0.001 0.079l-0-0.004c0.131 1.467 0.681 2.784 1.527 3.857l-0.012-0.015c1.604 2.379 3.742 4.282 6.251 5.564l0.094 0.043c0.548 0.248 1.25 0.513 1.968 0.74l0.149 0.041c0.442 0.14 0.951 0.221 1.479 0.221 0.303 0 0.601-0.027 0.889-0.078l-0.031 0.004c1.069-0.223 1.956-0.868 2.497-1.749l0.009-0.017c0.165-0.366 0.261-0.793 0.261-1.242 0-0.185-0.016-0.366-0.047-0.542l0.003 0.019c-0.092-0.155-0.34-0.247-0.712-0.434z">
+            </path>
         </svg>
+    </a>
+
+    <a href="en/faq.html" class="btn-floating btn-language" data-text="English" aria-label="Cambiar idioma a Inglés">
+        <img src="https://flagcdn.com/w160/gb.png" alt="Bandera de Reino Unido - Cambio de idioma a Inglés" width="160"
+            height="96" loading="lazy">
     </a>
 
     <header class="hero-section">
         <div class="hero-content">
-            <h1>Preguntas frecuentes</h1>
+            <h1>Preguntas Frecuentes</h1>
+            <p class="hero-p">Todo lo que necesitas saber para planificar tu próxima estancia de lujo con total
+                tranquilidad.</p>
         </div>
     </header>
 
-    <section class="faq-section" id="preguntas">
-        
+    <main>
+        <section class="faq-intro-section section-padding">
+            <h2>¿Tienes dudas? Estamos para ayudarte</h2>
+            <p>Para garantizar una experiencia fluida y transparente, hemos recopilado las preguntas más comunes de
+                nuestros huéspedes. Si no encuentras la respuesta que buscas, no dudes en contactarnos directamente vía
+                WhatsApp.</p>
+        </section>
 
-        <div class="faq-item">
-            <button class="faq-question">¿Cómo garantizan la seguridad de mi reserva?</button>
-            <div class="faq-answer">
-                <p>Todas nuestras reservas están respaldadas por la plataforma Airbnb. Como anfitriones con la categoría <strong>Superhost</strong>, garantizamos que tu pago y estancia están 100% protegidos por las políticas de seguridad globales de la plataforma.</p>
-            </div>
-        </div>
+        <section class="faq-container">
 
-        <div class="faq-item">
-            <button class="faq-question">¿Qué amenidades incluyen sus alojamientos?</button>
-            <div class="faq-answer">
-                <p>Mantenemos estándares de alta gama. Todas nuestras propiedades cuentan con mobiliario de lujo, Wi-Fi de alta velocidad ideal para trabajar, aire acondicionado, cocinas equipadas y kits de baño premium. Puedes revisar los detalles específicos en la página de cada alojamiento.</p>
-            </div>
-        </div>
+            <div class="faq-category-title">Reservas y Pagos</div>
 
-        <div class="faq-item">
-            <button class="faq-question">¿Cuáles son los horarios de Check-in y Check-out?</button>
-            <div class="faq-answer">
-                <p>El horario estándar de entrada (Check-in) es a partir de las <strong>15:00 hrs</strong>, y la salida (Check-out) es a las <strong>11:00 hrs</strong>. Si requieres flexibilidad por tus vuelos, contáctanos vía WhatsApp y revisaremos la disponibilidad para acomodarnos a tus horarios.</p>
-            </div>
-        </div>
+            <details class="faq-item">
+                <summary>¿Cómo puedo realizar una reservación?</summary>
+                <p class="faq-answer">Puedes explorar y reservar nuestras propiedades haciendo clic en nuestra sección
+                    de <strong>Alojamientos</strong>. Todos nuestros enlaces te redirigirán de manera directa y segura a
+                    nuestros perfiles de <strong>Airbnb</strong>, asegurando una transacción protegida mundialmente.</p>
+            </details>
 
-        <div class="faq-item">
-            <button class="faq-question">¿Aceptan mascotas en las propiedades?</button>
-            <div class="faq-answer">
-                <p>Sabemos que tus mascotas son parte de la familia. Varios de nuestros alojamientos en destinos seleccionados son <em>Pet Friendly</em>. Te sugerimos confirmar esta característica en la descripción de la propiedad antes de realizar tu reserva.</p>
-            </div>
-        </div>
+            <details class="faq-item">
+                <summary>¿Cuáles son las políticas de cancelación?</summary>
+                <p class="faq-answer">Las políticas de cancelación varían según la propiedad seleccionada y las fechas
+                    de viaje. Podrás revisar el detalle específico de las condiciones de reembolso antes de confirmar tu
+                    pago directamente dentro de la plataforma de reserva.</p>
+            </details>
 
-        <div class="faq-item">
-            <button class="faq-question">¿Tienen servicio de limpieza durante la estancia?</button>
-            <div class="faq-answer">
-                <p>Nuestras propiedades se entregan con una limpieza profunda y sanitización garantizada. Para estancias largas, ofrecemos servicio de limpieza adicional con costo extra. Solo necesitas solicitarlo con 24 horas de anticipación a nuestro equipo.</p>
-            </div>
-        </div>
-    </section>
+            <div class="faq-category-title">Llegada y Salida</div>
+
+            <details class="faq-item">
+                <summary>¿Cuáles son los horarios de Check-in y Check-out?</summary>
+                <p class="faq-answer">El horario estándar de entrada (<strong>Check-in</strong>) es a partir de las
+                    <strong>15:00 hrs</strong>, mientras que la salida (<strong>Check-out</strong>) debe realizarse
+                    antes de las <strong>11:00 hrs</strong>. Esto nos permite asegurar los tiempos requeridos para la
+                    limpieza profunda del espacio.
+                </p>
+            </details>
+
+            <details class="faq-item">
+                <summary>¿Es posible ingresar antes o salir después del horario establecido?</summary>
+                <p class="faq-answer">El *Early Check-in* o *Late Check-out* está sujeto estrictamente a la
+                    disponibilidad de la propiedad (dependiendo de si hay huéspedes saliendo o entrando el mismo día).
+                    Por favor, solicítalo con anticipación a nuestro equipo de reservaciones para validar si es
+                    factible.</p>
+            </details>
+
+            <div class="faq-category-title">Estancia y Servicios</div>
+
+            <details class="faq-item">
+                <summary>¿Qué medidas de higiene implementan en las propiedades?</summary>
+                <p class="faq-answer">Tu bienestar es primordial. Contamos con <strong>protocolos estrictos de
+                        sanitización y limpieza profunda</strong> realizados por personal profesional antes de cada
+                    llegada, garantizando un espacio impecable y seguro.</p>
+            </details>
+
+            <details class="faq-item">
+                <summary>¿Las propiedades cuentan con Wi-Fi de alta velocidad?</summary>
+                <p class="faq-answer">Sí, entendemos que la conectividad es fundamental. Todas las estancias de nuestra
+                    colección premium están equipadas con <strong>Internet de alta velocidad</strong>, ideal tanto para
+                    el entretenimiento como para el cumplimiento de tus necesidades laborales en modalidad Home Office.
+                </p>
+            </details>
+
+            <details class="faq-item">
+                <summary>¿Se permiten mascotas o eventos en las propiedades?</summary>
+                <p class="faq-answer">Con el fin de preservar los altos estándares de conservación y diseño de nuestros
+                    alojamientos, de manera general no se permiten fiestas ni eventos. Respecto a las mascotas, el
+                    acceso depende de las reglas específicas de cada propiedad; te sugerimos revisar las
+                    especificaciones de cada anuncio.</p>
+            </details>
+
+        </section>
+    </main>
 
     <footer>
         <div class="footer-content">
             <div class="footer-logo">
-                <h4>Kali Rental</h4>
-                <p style="font-size: 0.9rem; margin-top: 10px; color:#fff">Experiencias extraordinarias en cada estancia.</p>
+                <p style="font-size: 1.2rem; font-weight: bold; margin-bottom: 0; color:#fff">Kali Rental</p>
+                <p style="font-size: 0.9rem; margin-top: 10px; color:#fff">Experiencias extraordinarias en cada
+                    estancia.</p>
             </div>
             <div>
-                <h5 style="color: #0eb28d; margin-bottom: 15px;">Contacto</h5>
+                <p style="color: #0eb28d; font-weight: bold; margin-bottom: 15px;">Contacto</p>
                 <p class="footer-text">Email: reservations@kalirental.com<br>WhatsApp: +52 5645656077</p>
             </div>
             <div>
-                <h5 style="color: #0eb28d; margin-bottom: 15px;">Síguenos</h5>
+                <p style="color: #0eb28d; font-weight: bold; margin-bottom: 15px;">Síguenos</p>
                 <p class="footer-text">Instagram | Facebook</p>
             </div>
         </div>
         <div class="copyright">
-            © 2024 Kali Rental - Todos los derechos reservados. Gestionado vía Airbnb.
+            © 2026 Kali Rental - Todos los derechos reservados.
         </div>
     </footer>
 
-    <script>
-        const faqItems = document.querySelectorAll('.faq-item');
-
-        faqItems.forEach(item => {
-            const question = item.querySelector('.faq-question');
-            
-            question.addEventListener('click', () => {
-                const isOpen = item.classList.contains('active');
-                
-                // Cierra todas las demás preguntas
-                faqItems.forEach(i => {
-                    i.classList.remove('active');
-                    i.querySelector('.faq-answer').style.maxHeight = null;
-                });
-
-                // Si estaba cerrada, la abre
-                if (!isOpen) {
-                    item.classList.add('active');
-                    const answer = item.querySelector('.faq-answer');
-                    answer.style.maxHeight = answer.scrollHeight + "px";
-                }
-            });
-        });
-    </script>
-
 </body>
+
 </html>
