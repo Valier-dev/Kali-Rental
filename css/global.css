@@ -15,7 +15,7 @@
         .hero-section {
             position: relative;
             width: 100vw;
-            min-height: 45vh;
+            min-height: 50vh;
             /* Ajustado ligeramente para páginas internas */
             display: flex;
             align-items: center;
